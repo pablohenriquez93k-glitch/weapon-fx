@@ -1,0 +1,13 @@
+{
+  "context": "client",
+  "identifier": "com.pa.pabloandclaude.weaponfx",
+  "display_name": "Weapon FX",
+  "description": "Stronger, richer weapon effects (muzzle flashes, trails, impacts) built from the vanilla ones. Cosmetic only, no gameplay changes. Designed to sit below gameplay-readability effect mods (lower priority).",
+  "author": "Pablo & Claude",
+  "version": "0.1.0",
+  "build": "124674",
+  "date": "2026-09-24",
+  "signature": " ",
+  "priority": 90,
+  "category": ["titans", "effects"]
+}
