@@ -8,6 +8,10 @@
   "build": "124674",
   "date": "2026-09-24",
   "signature": " ",
+  "forum": "https://github.com/pablohenriquez93k-glitch/weapon-fx",
   "priority": 90,
-  "category": ["titans", "effects"]
+  "category": [
+    "titans",
+    "effects"
+  ]
 }
