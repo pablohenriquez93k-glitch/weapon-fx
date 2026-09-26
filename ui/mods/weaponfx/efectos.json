@@ -1,0 +1,5881 @@
+{
+ "version": 1,
+ "wfx": "/pa/effects/specs/wfx/",
+ "niveles": [
+  "bajo",
+  "alto",
+  "uber"
+ ],
+ "efectos": {
+  "bomber/estela_rocket_proj_trail.pfx": {
+   "unidad": "bomber",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/rocket_proj_trail.pfx"
+  },
+  "bomber/impacto_default_explosion.pfx": {
+   "unidad": "bomber",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_explosion.pfx"
+  },
+  "bomber_adv/estela_missile_tactical_trail.pfx": {
+   "unidad": "bomber_adv",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+  },
+  "bomber_adv/impacto_default_proj_area_explosion.pfx": {
+   "unidad": "bomber_adv",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_proj_area_explosion.pfx"
+  },
+  "fighter/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "fighter",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "fighter/impacto_default_proj_explosion.pfx": {
+   "unidad": "fighter",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "fighter_adv/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "fighter_adv",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "fighter_adv/impacto_default_proj_explosion.pfx": {
+   "unidad": "fighter_adv",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "gunship/fogonazo_gunship_muzzle_flash.pfx": {
+   "unidad": "gunship",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/units/air/gunship/gunship_muzzle_flash.pfx"
+  },
+  "gunship/estela_gunship_ammo_trail.pfx": {
+   "unidad": "gunship",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/air/gunship/gunship_ammo_trail.pfx"
+  },
+  "gunship/impacto_default_proj_explosion.pfx": {
+   "unidad": "gunship",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "base_commander/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "base_commander",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "base_commander/suelo_disparo.pfx": {
+   "unidad": "base_commander",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "base_commander/estela_bullet_proj_trail.pfx": {
+   "unidad": "base_commander",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx"
+  },
+  "base_commander/impacto_default_proj_explosion.pfx": {
+   "unidad": "base_commander",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "base_commander/estela_uber_proj_trail.pfx": {
+   "unidad": "base_commander",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/uber_proj_trail.pfx"
+  },
+  "base_commander/impacto_uber_proj_explosion.pfx": {
+   "unidad": "base_commander",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/uber_proj_explosion.pfx"
+  },
+  "base_commander/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "base_commander",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "base_commander/estela_torpedo_proj_trail.pfx": {
+   "unidad": "base_commander",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "base_commander/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "base_commander",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "imperial_aceal/estela_laser_blast_proj_trail.pfx": {
+   "unidad": "imperial_aceal",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/laser_blast_proj_trail.pfx"
+  },
+  "raptor_unicorn/fogonazo_raptor_unicorn_muzzle_flash.pfx": {
+   "unidad": "raptor_unicorn",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/units/commanders/raptor_unicorn/raptor_unicorn_muzzle_flash.pfx"
+  },
+  "raptor_unicorn/suelo_disparo.pfx": {
+   "unidad": "raptor_unicorn",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "aa_missile_vehicle/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "aa_missile_vehicle",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "aa_missile_vehicle/suelo_disparo.pfx": {
+   "unidad": "aa_missile_vehicle",
+   "ranura": "suelo",
+   "familia": "antiaereo",
+   "origen": null
+  },
+  "aa_missile_vehicle/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "aa_missile_vehicle",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "aa_missile_vehicle/impacto_default_proj_explosion.pfx": {
+   "unidad": "aa_missile_vehicle",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "air_defense/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "air_defense",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "air_defense/suelo_disparo.pfx": {
+   "unidad": "air_defense",
+   "ranura": "suelo",
+   "familia": "antiaereo",
+   "origen": null
+  },
+  "air_defense/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "air_defense",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "air_defense/impacto_default_proj_explosion.pfx": {
+   "unidad": "air_defense",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "air_defense_adv/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "air_defense_adv",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "air_defense_adv/suelo_disparo.pfx": {
+   "unidad": "air_defense_adv",
+   "ranura": "suelo",
+   "familia": "antiaereo",
+   "origen": null
+  },
+  "air_defense_adv/estela_air_defense_adv_ammo_beam.pfx": {
+   "unidad": "air_defense_adv",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/units/land/air_defense_adv/air_defense_adv_ammo_beam.pfx"
+  },
+  "air_defense_adv/impacto_default_proj_flak_explosion.pfx": {
+   "unidad": "air_defense_adv",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_flak_explosion.pfx"
+  },
+  "anti_nuke_launcher/suelo_disparo.pfx": {
+   "unidad": "anti_nuke_launcher",
+   "ranura": "suelo",
+   "familia": "misil",
+   "origen": null
+  },
+  "anti_nuke_launcher/estela_anti_nuke_launcher_ammo_trail.pfx": {
+   "unidad": "anti_nuke_launcher",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo_trail.pfx",
+   "con": [
+    "tank_anti_nuke"
+   ]
+  },
+  "anti_nuke_launcher/impacto_anti_nuke_launcher_ammo_explosion.pfx": {
+   "unidad": "anti_nuke_launcher",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo_explosion.pfx",
+   "con": [
+    "tank_anti_nuke"
+   ]
+  },
+  "artillery_long/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "artillery_long",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "artillery_long/fogonazo_artillery_muzzle_ground.pfx": {
+   "unidad": "artillery_long",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/artillery_muzzle_ground.pfx"
+  },
+  "artillery_long/estela_shell_artillery_large_proj_trail.pfx": {
+   "unidad": "artillery_long",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+  },
+  "artillery_long/impacto_default_building_explosion.pfx": {
+   "unidad": "artillery_long",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_building_explosion.pfx"
+  },
+  "artillery_short/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "artillery_short",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "artillery_short/fogonazo_artillery_muzzle_ground.pfx": {
+   "unidad": "artillery_short",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/artillery_muzzle_ground.pfx"
+  },
+  "artillery_short/estela_shell_artillery_large_proj_trail.pfx": {
+   "unidad": "artillery_short",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+  },
+  "artillery_short/impacto_default_explosion.pfx": {
+   "unidad": "artillery_short",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_explosion.pfx"
+  },
+  "assault_bot/fogonazo_default_small_muzzle_flash.pfx": {
+   "unidad": "assault_bot",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+  },
+  "assault_bot/suelo_disparo.pfx": {
+   "unidad": "assault_bot",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "assault_bot/estela_bullet_proj_trail.pfx": {
+   "unidad": "assault_bot",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx",
+   "con": [
+    "tank_nuke"
+   ]
+  },
+  "assault_bot/impacto_default_proj_explosion.pfx": {
+   "unidad": "assault_bot",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx",
+   "con": [
+    "tank_nuke"
+   ]
+  },
+  "assault_bot_adv/fogonazo_default_small_muzzle_flash.pfx": {
+   "unidad": "assault_bot_adv",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+  },
+  "assault_bot_adv/suelo_disparo.pfx": {
+   "unidad": "assault_bot_adv",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "assault_bot_adv/estela_assault_bot_adv_ammo_trail.pfx": {
+   "unidad": "assault_bot_adv",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/land/assault_bot_adv/assault_bot_adv_ammo_trail.pfx"
+  },
+  "assault_bot_adv/impacto_default_proj_explosion.pfx": {
+   "unidad": "assault_bot_adv",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "assault_bot_adv/estela_torpedo_proj_trail.pfx": {
+   "unidad": "assault_bot_adv",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "assault_bot_adv/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "assault_bot_adv",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "bot_aa/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "bot_aa",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "bot_aa/suelo_disparo.pfx": {
+   "unidad": "bot_aa",
+   "ranura": "suelo",
+   "familia": "antiaereo",
+   "origen": null
+  },
+  "bot_aa/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "bot_aa",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "bot_aa/impacto_default_proj_explosion.pfx": {
+   "unidad": "bot_aa",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "bot_grenadier/fogonazo_default_small_muzzle_flash.pfx": {
+   "unidad": "bot_grenadier",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+  },
+  "bot_grenadier/suelo_disparo.pfx": {
+   "unidad": "bot_grenadier",
+   "ranura": "suelo",
+   "familia": "explosiva",
+   "origen": null
+  },
+  "bot_grenadier/estela_bullet_proj_trail.pfx": {
+   "unidad": "bot_grenadier",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx"
+  },
+  "bot_grenadier/impacto_default_explosion.pfx": {
+   "unidad": "bot_grenadier",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_explosion.pfx"
+  },
+  "bot_sniper/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "bot_sniper/suelo_disparo.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "bot_sniper/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "bot_sniper/fogonazo_bot_sniper_beam_flash.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "fogonazo",
+   "familia": "energia",
+   "origen": "/pa/units/land/bot_sniper/bot_sniper_beam_flash.pfx"
+  },
+  "bot_sniper/estela_shell_artillery_large_proj_trail.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+  },
+  "bot_sniper/impacto_default_proj_explosion.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "bot_sniper/estela_bot_sniper_beam.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/units/land/bot_sniper/bot_sniper_beam.pfx"
+  },
+  "bot_sniper/impacto_bot_sniper_beam_hit.pfx": {
+   "unidad": "bot_sniper",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/units/land/bot_sniper/bot_sniper_beam_hit.pfx"
+  },
+  "bot_spider_adv/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "bot_spider_adv",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "bot_spider_adv/suelo_disparo.pfx": {
+   "unidad": "bot_spider_adv",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "bot_spider_adv/estela_bullet_proj_trail.pfx": {
+   "unidad": "bot_spider_adv",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx"
+  },
+  "bot_spider_adv/impacto_default_proj_explosion.pfx": {
+   "unidad": "bot_spider_adv",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "bot_tactical_missile/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "bot_tactical_missile",
+   "ranura": "fogonazo",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "bot_tactical_missile/suelo_disparo.pfx": {
+   "unidad": "bot_tactical_missile",
+   "ranura": "suelo",
+   "familia": "misil",
+   "origen": null
+  },
+  "bot_tactical_missile/estela_missile_tactical_trail.pfx": {
+   "unidad": "bot_tactical_missile",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+  },
+  "bot_tactical_missile/impacto_default_proj_area_explosion.pfx": {
+   "unidad": "bot_tactical_missile",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_proj_area_explosion.pfx"
+  },
+  "bot_tactical_missile/estela_ion_defense_antidrop_ammo_trail.pfx": {
+   "unidad": "bot_tactical_missile",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+  },
+  "bot_tactical_missile/impacto_default_proj_explosion.pfx": {
+   "unidad": "bot_tactical_missile",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "land_scout/suelo_disparo.pfx": {
+   "unidad": "land_scout",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "laser_defense/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "laser_defense",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "laser_defense/suelo_disparo.pfx": {
+   "unidad": "laser_defense",
+   "ranura": "suelo",
+   "familia": "laser",
+   "origen": null
+  },
+  "laser_defense/estela_laser_defense_ammo_trail.pfx": {
+   "unidad": "laser_defense",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/land/laser_defense/laser_defense_ammo_trail.pfx"
+  },
+  "laser_defense_adv/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "laser_defense_adv",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "laser_defense_adv/suelo_disparo.pfx": {
+   "unidad": "laser_defense_adv",
+   "ranura": "suelo",
+   "familia": "laser",
+   "origen": null
+  },
+  "laser_defense_adv/estela_laser_defense_adv_ammo_trail.pfx": {
+   "unidad": "laser_defense_adv",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/land/laser_defense_adv/laser_defense_adv_ammo_trail.pfx"
+  },
+  "laser_defense_single/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "laser_defense_single",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "laser_defense_single/suelo_disparo.pfx": {
+   "unidad": "laser_defense_single",
+   "ranura": "suelo",
+   "familia": "laser",
+   "origen": null
+  },
+  "laser_defense_single/estela_laser_defense_single_ammo_trail.pfx": {
+   "unidad": "laser_defense_single",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/land/laser_defense_single/laser_defense_single_ammo_trail.pfx"
+  },
+  "nuke_launcher/fogonazo_nuke_launcher_launch.pfx": {
+   "unidad": "nuke_launcher",
+   "ranura": "fogonazo",
+   "familia": "misil",
+   "origen": "/pa/units/land/nuke_launcher/nuke_launcher_launch.pfx"
+  },
+  "nuke_launcher/suelo_disparo.pfx": {
+   "unidad": "nuke_launcher",
+   "ranura": "suelo",
+   "familia": "misil",
+   "origen": null
+  },
+  "nuke_launcher/estela_missile_nuke_trail.pfx": {
+   "unidad": "nuke_launcher",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/air/missile_nuke/missile_nuke_trail.pfx"
+  },
+  "tactical_missile_launcher/fogonazo_tactical_missile_launcher_launch.pfx": {
+   "unidad": "tactical_missile_launcher",
+   "ranura": "fogonazo",
+   "familia": "misil",
+   "origen": "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher_launch.pfx"
+  },
+  "tactical_missile_launcher/suelo_disparo.pfx": {
+   "unidad": "tactical_missile_launcher",
+   "ranura": "suelo",
+   "familia": "misil",
+   "origen": null
+  },
+  "tactical_missile_launcher/estela_missile_tactical_trail.pfx": {
+   "unidad": "tactical_missile_launcher",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+  },
+  "tactical_missile_launcher/impacto_default_proj_area_explosion.pfx": {
+   "unidad": "tactical_missile_launcher",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_proj_area_explosion.pfx"
+  },
+  "tactical_missile_launcher/estela_ion_defense_antidrop_ammo_trail.pfx": {
+   "unidad": "tactical_missile_launcher",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+  },
+  "tactical_missile_launcher/impacto_default_proj_explosion.pfx": {
+   "unidad": "tactical_missile_launcher",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "tank_armor/fogonazo_tank_armor_muzzle_flame.pfx": {
+   "unidad": "tank_armor",
+   "ranura": "fogonazo",
+   "familia": "fuego",
+   "origen": "/pa/units/land/tank_armor/tank_armor_muzzle_flame.pfx"
+  },
+  "tank_armor/suelo_disparo.pfx": {
+   "unidad": "tank_armor",
+   "ranura": "suelo",
+   "familia": "fuego",
+   "origen": null
+  },
+  "tank_heavy_armor/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "tank_heavy_armor",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "tank_heavy_armor/suelo_disparo.pfx": {
+   "unidad": "tank_heavy_armor",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "tank_heavy_armor/estela_uber_proj_trail.pfx": {
+   "unidad": "tank_heavy_armor",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/uber_proj_trail.pfx"
+  },
+  "tank_heavy_armor/impacto_uber_proj_explosion.pfx": {
+   "unidad": "tank_heavy_armor",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/uber_proj_explosion.pfx"
+  },
+  "tank_heavy_mortar/suelo_disparo.pfx": {
+   "unidad": "tank_heavy_mortar",
+   "ranura": "suelo",
+   "familia": "explosiva",
+   "origen": null
+  },
+  "tank_heavy_mortar/estela_shell_artillery_small_proj_trail.pfx": {
+   "unidad": "tank_heavy_mortar",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/shell_artillery_small_proj_trail.pfx"
+  },
+  "tank_heavy_mortar/impacto_default_explosion.pfx": {
+   "unidad": "tank_heavy_mortar",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_explosion.pfx"
+  },
+  "tank_laser_adv/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "tank_laser_adv",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "tank_laser_adv/suelo_disparo.pfx": {
+   "unidad": "tank_laser_adv",
+   "ranura": "suelo",
+   "familia": "laser",
+   "origen": null
+  },
+  "tank_laser_adv/estela_tank_laser_adv_proj_trail.pfx": {
+   "unidad": "tank_laser_adv",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/land/tank_laser_adv/tank_laser_adv_proj_trail.pfx"
+  },
+  "tank_laser_adv/impacto_default_proj_explosion.pfx": {
+   "unidad": "tank_laser_adv",
+   "ranura": "impacto",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "tank_light_laser/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "tank_light_laser",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "tank_light_laser/suelo_disparo.pfx": {
+   "unidad": "tank_light_laser",
+   "ranura": "suelo",
+   "familia": "laser",
+   "origen": null
+  },
+  "tank_light_laser/estela_tank_light_proj.pfx": {
+   "unidad": "tank_light_laser",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/tank_light_proj.pfx"
+  },
+  "tank_light_laser/impacto_default_proj_explosion.pfx": {
+   "unidad": "tank_light_laser",
+   "ranura": "impacto",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "unit_cannon/fogonazo_unit_cannon_fire.pfx": {
+   "unidad": "unit_cannon",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/units/land/unit_cannon/unit_cannon_fire.pfx"
+  },
+  "unit_cannon/estela_unit_shell_trail.pfx": {
+   "unidad": "unit_cannon",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/air/unit_shell/unit_shell_trail.pfx"
+  },
+  "unit_cannon/impacto_unit_shell_deploy.pfx": {
+   "unidad": "unit_cannon",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/units/air/unit_shell/unit_shell_deploy.pfx"
+  },
+  "defense_satellite/estela_defense_satellite_ammo_ground_beam.pfx": {
+   "unidad": "defense_satellite",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_ground_beam.pfx"
+  },
+  "defense_satellite/impacto_defense_satellite_ammo_ground_beam_hit.pfx": {
+   "unidad": "defense_satellite",
+   "ranura": "impacto",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_ground_beam_hit.pfx"
+  },
+  "defense_satellite/estela_defense_satellite_ammo_orbital_beam.pfx": {
+   "unidad": "defense_satellite",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam.pfx"
+  },
+  "defense_satellite/impacto_defense_satellite_ammo_orbital_beam_hit.pfx": {
+   "unidad": "defense_satellite",
+   "ranura": "impacto",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam_hit.pfx"
+  },
+  "ion_defense/fogonazo_ion_defense_muzzle_flash.pfx": {
+   "unidad": "ion_defense",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/ion_defense/ion_defense_muzzle_flash.pfx"
+  },
+  "ion_defense/estela_ion_defense_proj_trail.pfx": {
+   "unidad": "ion_defense",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/ion_defense/ion_defense_proj_trail.pfx"
+  },
+  "ion_defense/estela_ion_defense_antidrop_ammo_trail.pfx": {
+   "unidad": "ion_defense",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+  },
+  "ion_defense/impacto_default_proj_explosion.pfx": {
+   "unidad": "ion_defense",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "orbital_fighter/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "orbital_fighter",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "orbital_fighter/estela_laser_defense_adv_ammo_trail.pfx": {
+   "unidad": "orbital_fighter",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/units/land/laser_defense_adv/laser_defense_adv_ammo_trail.pfx"
+  },
+  "orbital_laser/fogonazo_orbital_laser_muzzle_flash.pfx": {
+   "unidad": "orbital_laser",
+   "ranura": "fogonazo",
+   "familia": "energia",
+   "origen": "/pa/units/orbital/orbital_laser/orbital_laser_muzzle_flash.pfx"
+  },
+  "orbital_laser/estela_orbital_laser_ammo_beam.pfx": {
+   "unidad": "orbital_laser",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/units/orbital/orbital_laser/orbital_laser_ammo_beam.pfx"
+  },
+  "orbital_laser/impacto_orbital_laser_ammo_beam_hit.pfx": {
+   "unidad": "orbital_laser",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/units/orbital/orbital_laser/orbital_laser_ammo_beam_hit.pfx"
+  },
+  "attack_sub/estela_torpedo_proj_trail.pfx": {
+   "unidad": "attack_sub",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "attack_sub/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "attack_sub",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "battleship/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "battleship",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "battleship/suelo_disparo.pfx": {
+   "unidad": "battleship",
+   "ranura": "suelo",
+   "familia": "explosiva",
+   "origen": null
+  },
+  "battleship/estela_battleship_shell_proj_trail.pfx": {
+   "unidad": "battleship",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+  },
+  "battleship/impacto_battleship_hit.pfx": {
+   "unidad": "battleship",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/sea/battleship/battleship_hit.pfx"
+  },
+  "destroyer/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "destroyer",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "destroyer/estela_battleship_shell_proj_trail.pfx": {
+   "unidad": "destroyer",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+  },
+  "destroyer/impacto_battleship_hit.pfx": {
+   "unidad": "destroyer",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/battleship/battleship_hit.pfx"
+  },
+  "frigate/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "frigate",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "frigate/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "frigate",
+   "ranura": "fogonazo",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "frigate/estela_battleship_shell_proj_trail.pfx": {
+   "unidad": "frigate",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+  },
+  "frigate/impacto_battleship_hit.pfx": {
+   "unidad": "frigate",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/battleship/battleship_hit.pfx"
+  },
+  "frigate/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "frigate",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "frigate/impacto_default_proj_explosion.pfx": {
+   "unidad": "frigate",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "frigate/estela_frigate_ammo_torpedo_trail.pfx": {
+   "unidad": "frigate",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/units/sea/frigate/frigate_ammo_torpedo_trail.pfx"
+  },
+  "missile_ship/estela_missile_tactical_trail.pfx": {
+   "unidad": "missile_ship",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+  },
+  "missile_ship/impacto_default_proj_area_explosion.pfx": {
+   "unidad": "missile_ship",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/effects/specs/default_proj_area_explosion.pfx"
+  },
+  "missile_ship/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "missile_ship",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "missile_ship/impacto_default_proj_explosion.pfx": {
+   "unidad": "missile_ship",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "missile_ship/estela_ion_defense_antidrop_ammo_trail.pfx": {
+   "unidad": "missile_ship",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+  },
+  "nuclear_sub/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "nuclear_sub",
+   "ranura": "fogonazo",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "nuclear_sub/suelo_disparo.pfx": {
+   "unidad": "nuclear_sub",
+   "ranura": "suelo",
+   "familia": "torpedo",
+   "origen": null
+  },
+  "nuclear_sub/estela_torpedo_proj_trail.pfx": {
+   "unidad": "nuclear_sub",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "nuclear_sub/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "nuclear_sub",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "nuclear_sub/estela_missile_tactical_trail.pfx": {
+   "unidad": "nuclear_sub",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+  },
+  "nuclear_sub/impacto_battleship_hit.pfx": {
+   "unidad": "nuclear_sub",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/units/sea/battleship/battleship_hit.pfx"
+  },
+  "sea_scout/estela_bullet_proj_trail.pfx": {
+   "unidad": "sea_scout",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx"
+  },
+  "sea_scout/impacto_default_proj_explosion.pfx": {
+   "unidad": "sea_scout",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "torpedo_launcher/estela_torpedo_proj_trail.pfx": {
+   "unidad": "torpedo_launcher",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "torpedo_launcher/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "torpedo_launcher",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "torpedo_launcher_adv/estela_torpedo_proj_trail.pfx": {
+   "unidad": "torpedo_launcher_adv",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "torpedo_launcher_adv/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "torpedo_launcher_adv",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "bomber_heavy/estela_shell_artillery_large_proj_trail.pfx": {
+   "unidad": "bomber_heavy",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+  },
+  "bomber_heavy/impacto_bomber_heavy_attack.pfx": {
+   "unidad": "bomber_heavy",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/air/bomber_heavy/bomber_heavy_attack.pfx"
+  },
+  "solar_drone/fogonazo_solar_drone_muzzle_flash.pfx": {
+   "unidad": "solar_drone",
+   "ranura": "fogonazo",
+   "familia": "energia",
+   "origen": "/pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx"
+  },
+  "solar_drone/estela_solar_drone_ammo_beam.pfx": {
+   "unidad": "solar_drone",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/units/air/solar_drone/solar_drone_ammo_beam.pfx"
+  },
+  "solar_drone/impacto_default_proj_explosion.pfx": {
+   "unidad": "solar_drone",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "strafer/fogonazo_strafer_muzzle_flash.pfx": {
+   "unidad": "strafer",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/units/air/strafer/strafer_muzzle_flash.pfx"
+  },
+  "strafer/estela_strafer_ammo_trail.pfx": {
+   "unidad": "strafer",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/air/strafer/strafer_ammo_trail.pfx"
+  },
+  "strafer/impacto_default_proj_explosion.pfx": {
+   "unidad": "strafer",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "support_platform/fogonazo_bot_sniper_beam_flash.pfx": {
+   "unidad": "support_platform",
+   "ranura": "fogonazo",
+   "familia": "misil",
+   "origen": "/pa/units/land/bot_sniper/bot_sniper_beam_flash.pfx"
+  },
+  "support_platform/estela_bot_sniper_beam.pfx": {
+   "unidad": "support_platform",
+   "ranura": "estela",
+   "familia": "misil",
+   "origen": "/pa/units/land/bot_sniper/bot_sniper_beam.pfx"
+  },
+  "support_platform/impacto_bot_sniper_beam_hit.pfx": {
+   "unidad": "support_platform",
+   "ranura": "impacto",
+   "familia": "misil",
+   "origen": "/pa/units/land/bot_sniper/bot_sniper_beam_hit.pfx"
+  },
+  "titan_air/fogonazo_titan_air_muzzle_flash.pfx": {
+   "unidad": "titan_air",
+   "ranura": "fogonazo",
+   "familia": "energia",
+   "origen": "/pa/units/air/titan_air/titan_air_muzzle_flash.pfx"
+  },
+  "titan_air/estela_titan_air_ammo_beam.pfx": {
+   "unidad": "titan_air",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/units/air/titan_air/titan_air_ammo_beam.pfx"
+  },
+  "titan_air/impacto_titan_air_ammo_beam_hit.pfx": {
+   "unidad": "titan_air",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/units/air/titan_air/titan_air_ammo_beam_hit.pfx"
+  },
+  "artillery_unit_launcher/fogonazo_artillery_unit_launcher_fire.pfx": {
+   "unidad": "artillery_unit_launcher",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/artillery_unit_launcher/artillery_unit_launcher_fire.pfx"
+  },
+  "artillery_unit_launcher/estela_shell_artillery_large_proj_trail.pfx": {
+   "unidad": "artillery_unit_launcher",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+  },
+  "artillery_unit_launcher/impacto_unit_shell_deploy.pfx": {
+   "unidad": "artillery_unit_launcher",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/air/unit_shell/unit_shell_deploy.pfx"
+  },
+  "attack_vehicle/fogonazo_default_small_muzzle_flash.pfx": {
+   "unidad": "attack_vehicle",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+  },
+  "attack_vehicle/suelo_disparo.pfx": {
+   "unidad": "attack_vehicle",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "attack_vehicle/estela_bullet_proj_trail.pfx": {
+   "unidad": "attack_vehicle",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx"
+  },
+  "attack_vehicle/impacto_default_proj_explosion.pfx": {
+   "unidad": "attack_vehicle",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "bot_nanoswarm/suelo_disparo.pfx": {
+   "unidad": "bot_nanoswarm",
+   "ranura": "suelo",
+   "familia": "laser",
+   "origen": null
+  },
+  "bot_nanoswarm/estela_nanoswarm_attack.pfx": {
+   "unidad": "bot_nanoswarm",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/nanoswarm_attack.pfx"
+  },
+  "bot_nanoswarm/impacto_nanoswarm_hit.pfx": {
+   "unidad": "bot_nanoswarm",
+   "ranura": "impacto",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/nanoswarm_hit.pfx"
+  },
+  "bot_support_commander/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "bot_support_commander",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "bot_support_commander/suelo_disparo.pfx": {
+   "unidad": "bot_support_commander",
+   "ranura": "suelo",
+   "familia": "antiaereo",
+   "origen": null
+  },
+  "bot_support_commander/estela_rocket_proj_trail_small.pfx": {
+   "unidad": "bot_support_commander",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+  },
+  "bot_support_commander/impacto_default_explosion.pfx": {
+   "unidad": "bot_support_commander",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_explosion.pfx"
+  },
+  "bot_tesla/fogonazo_tesla_muzzle_flash.pfx": {
+   "unidad": "bot_tesla",
+   "ranura": "fogonazo",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/tesla_muzzle_flash.pfx"
+  },
+  "bot_tesla/suelo_disparo.pfx": {
+   "unidad": "bot_tesla",
+   "ranura": "suelo",
+   "familia": "energia",
+   "origen": null
+  },
+  "bot_tesla/estela_tesla_proj_trail.pfx": {
+   "unidad": "bot_tesla",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/tesla_proj_trail.pfx"
+  },
+  "bot_tesla/impacto_tesla_hit.pfx": {
+   "unidad": "bot_tesla",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/tesla_hit.pfx"
+  },
+  "tank_flak/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "tank_flak",
+   "ranura": "fogonazo",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "tank_flak/suelo_disparo.pfx": {
+   "unidad": "tank_flak",
+   "ranura": "suelo",
+   "familia": "antiaereo",
+   "origen": null
+  },
+  "tank_flak/estela_shell_proj_trail.pfx": {
+   "unidad": "tank_flak",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/shell_proj_trail.pfx"
+  },
+  "tank_flak/impacto_flak_tank_explosion.pfx": {
+   "unidad": "tank_flak",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/units/land/tank_flak/flak_tank_explosion.pfx"
+  },
+  "tank_hover/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "tank_hover",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "tank_hover/suelo_disparo.pfx": {
+   "unidad": "tank_hover",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "tank_hover/estela_tank_light_proj.pfx": {
+   "unidad": "tank_hover",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/tank_light_proj.pfx"
+  },
+  "tank_hover/impacto_default_proj_explosion.pfx": {
+   "unidad": "tank_hover",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "tank_nuke/suelo_disparo.pfx": {
+   "unidad": "tank_nuke",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "titan_bot/suelo_disparo.pfx": {
+   "unidad": "titan_bot",
+   "ranura": "suelo",
+   "familia": "explosiva",
+   "origen": null
+  },
+  "titan_structure/suelo_disparo.pfx": {
+   "unidad": "titan_structure",
+   "ranura": "suelo",
+   "familia": "explosiva",
+   "origen": null
+  },
+  "titan_vehicle/fogonazo_titan_vehicle_main_muzzle_flash.pfx": {
+   "unidad": "titan_vehicle",
+   "ranura": "fogonazo",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/titan_vehicle/titan_vehicle_main_muzzle_flash.pfx"
+  },
+  "titan_vehicle/suelo_disparo.pfx": {
+   "unidad": "titan_vehicle",
+   "ranura": "suelo",
+   "familia": "explosiva",
+   "origen": null
+  },
+  "titan_vehicle/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "titan_vehicle",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "titan_vehicle/estela_titan_vehicle_ammo_main_proj_trail.pfx": {
+   "unidad": "titan_vehicle",
+   "ranura": "estela",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/titan_vehicle/titan_vehicle_ammo_main_proj_trail.pfx"
+  },
+  "titan_vehicle/impacto_battleship_hit.pfx": {
+   "unidad": "titan_vehicle",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/sea/battleship/battleship_hit.pfx"
+  },
+  "titan_vehicle/estela_shell_proj_trail.pfx": {
+   "unidad": "titan_vehicle",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/shell_proj_trail.pfx"
+  },
+  "orbital_battleship/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "orbital_battleship",
+   "ranura": "fogonazo",
+   "familia": "laser",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "orbital_battleship/estela_defense_satellite_ammo_orbital_beam.pfx": {
+   "unidad": "orbital_battleship",
+   "ranura": "estela",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam.pfx"
+  },
+  "orbital_battleship/impacto_defense_satellite_ammo_orbital_beam_hit.pfx": {
+   "unidad": "orbital_battleship",
+   "ranura": "impacto",
+   "familia": "laser",
+   "origen": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam_hit.pfx"
+  },
+  "orbital_battleship/estela_orbital_laser_ammo_beam.pfx": {
+   "unidad": "orbital_battleship",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/units/orbital/orbital_laser/orbital_laser_ammo_beam.pfx"
+  },
+  "orbital_railgun/fogonazo_orbital_railgun_muzzle_flash.pfx": {
+   "unidad": "orbital_railgun",
+   "ranura": "fogonazo",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/orbital_railgun_muzzle_flash.pfx"
+  },
+  "orbital_railgun/estela_orbital_railgun_beam.pfx": {
+   "unidad": "orbital_railgun",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/orbital_railgun_beam.pfx"
+  },
+  "orbital_railgun/impacto_orbital_railgun_hit.pfx": {
+   "unidad": "orbital_railgun",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/effects/specs/orbital_railgun_hit.pfx"
+  },
+  "titan_orbital/estela_titan_orbital_ammo_beam.pfx": {
+   "unidad": "titan_orbital",
+   "ranura": "estela",
+   "familia": "energia",
+   "origen": "/pa/units/orbital/titan_orbital/titan_orbital_ammo_beam.pfx"
+  },
+  "titan_orbital/impacto_titan_orbital_beam_hit.pfx": {
+   "unidad": "titan_orbital",
+   "ranura": "impacto",
+   "familia": "energia",
+   "origen": "/pa/units/orbital/titan_orbital/titan_orbital_beam_hit.pfx"
+  },
+  "carrier/fogonazo_carrier_drone_launch.pfx": {
+   "unidad": "carrier",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/drone_carrier/carrier/carrier_drone_launch.pfx"
+  },
+  "carrier/suelo_disparo.pfx": {
+   "unidad": "carrier",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "carrier/estela_carrier_ammo_trail.pfx": {
+   "unidad": "carrier",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/drone_carrier/carrier/carrier_ammo_trail.pfx"
+  },
+  "drone/estela_torpedo_proj_trail.pfx": {
+   "unidad": "drone",
+   "ranura": "estela",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/torpedo_proj_trail.pfx"
+  },
+  "drone/impacto_default_torpedo_explosion.pfx": {
+   "unidad": "drone",
+   "ranura": "impacto",
+   "familia": "torpedo",
+   "origen": "/pa/effects/specs/default_torpedo_explosion.pfx"
+  },
+  "drone/estela_drone_ammo_trail.pfx": {
+   "unidad": "drone",
+   "ranura": "estela",
+   "familia": "antiaereo",
+   "origen": "/pa/units/sea/drone_carrier/drone/drone_ammo_trail.pfx"
+  },
+  "drone/impacto_default_proj_explosion.pfx": {
+   "unidad": "drone",
+   "ranura": "impacto",
+   "familia": "antiaereo",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "hover_ship/fogonazo_tank_muzzle_flash.pfx": {
+   "unidad": "hover_ship",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/tank_muzzle_flash.pfx"
+  },
+  "hover_ship/suelo_disparo.pfx": {
+   "unidad": "hover_ship",
+   "ranura": "suelo",
+   "familia": "balistica",
+   "origen": null
+  },
+  "hover_ship/estela_battleship_shell_proj_trail.pfx": {
+   "unidad": "hover_ship",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+  },
+  "hover_ship/impacto_battleship_hit.pfx": {
+   "unidad": "hover_ship",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/units/sea/battleship/battleship_hit.pfx"
+  },
+  "hover_ship/estela_bullet_proj_trail.pfx": {
+   "unidad": "hover_ship",
+   "ranura": "estela",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/bullet_proj_trail.pfx"
+  },
+  "hover_ship/impacto_default_proj_explosion.pfx": {
+   "unidad": "hover_ship",
+   "ranura": "impacto",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_proj_explosion.pfx"
+  },
+  "orbital_mine/fogonazo_default_muzzle_flash.pfx": {
+   "unidad": "orbital_mine",
+   "ranura": "fogonazo",
+   "familia": "balistica",
+   "origen": "/pa/effects/specs/default_muzzle_flash.pfx"
+  },
+  "tank_anti_nuke/fogonazo_tactical_missile_launcher_launch.pfx": {
+   "unidad": "tank_anti_nuke",
+   "ranura": "fogonazo",
+   "familia": "misil",
+   "origen": "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher_launch.pfx"
+  },
+  "tank_anti_nuke/suelo_disparo.pfx": {
+   "unidad": "tank_anti_nuke",
+   "ranura": "suelo",
+   "familia": "misil",
+   "origen": null
+  },
+  "mine_pbaoe/impacto_default_explosion.pfx": {
+   "unidad": "mine_pbaoe",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_explosion.pfx",
+   "con": [
+    "land_mine"
+   ]
+  },
+  "nuke_pbaoe/impacto_default_commander_explosion.pfx": {
+   "unidad": "nuke_pbaoe",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_commander_explosion.pfx"
+  },
+  "nuke_pbaoe/impacto_default_commander_explosion_air.pfx": {
+   "unidad": "nuke_pbaoe",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/effects/specs/default_commander_explosion_air.pfx"
+  },
+  "bot_bomb/impacto_bot_bomb_ammo_explosion.pfx": {
+   "unidad": "bot_bomb",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/bot_bomb/bot_bomb_ammo_explosion.pfx"
+  },
+  "land_mine/impacto_land_mine_ammo_explosion.pfx": {
+   "unidad": "land_mine",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/land_mine/land_mine_ammo_explosion.pfx"
+  },
+  "nuke_launcher/impacto_nuke_launcher_ammo_explosion.pfx": {
+   "unidad": "nuke_launcher",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/nuke_launcher/nuke_launcher_ammo_explosion.pfx"
+  },
+  "titan_bot/impacto_titan_bot_attack.pfx": {
+   "unidad": "titan_bot",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/land/titan_bot/titan_bot_attack.pfx"
+  },
+  "titan_orbital/impacto_titan_air_death_fall.pfx": {
+   "unidad": "titan_orbital",
+   "ranura": "impacto",
+   "familia": "explosiva",
+   "origen": "/pa/units/air/titan_air/titan_air_death_fall.pfx"
+  }
+ },
+ "fichas": {
+  "/pa/units/air/bomber/bomber_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bomber/estela_rocket_proj_trail.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bomber/impacto_default_explosion.pfx",
+      "van": "/pa/effects/specs/default_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/bomber_adv/bomber_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bomber_adv/estela_missile_tactical_trail.pfx",
+      "van": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bomber_adv/impacto_default_proj_area_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_area_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/fighter/fighter_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "fighter/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "fighter/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/fighter_adv/fighter_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "fighter_adv/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "fighter_adv/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/gunship/gunship.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle",
+    "efectos": [
+     {
+      "id": "gunship/fogonazo_gunship_muzzle_flash.pfx",
+      "van": "/pa/units/air/gunship/gunship_muzzle_flash.pfx"
+     },
+     {
+      "id": "gunship/fogonazo_gunship_muzzle_flash.pfx",
+      "van": "/pa/units/air/gunship/gunship_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/gunship/gunship_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "gunship/estela_gunship_ammo_trail.pfx",
+      "van": "/pa/units/air/gunship/gunship_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "gunship/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/base_commander/base_commander.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1}",
+    "efectos": [
+     {
+      "id": "base_commander/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "base_commander/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/base_commander/base_commander_ammo_bullet.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/ammo/cannon_uber/cannon_uber.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/estela_uber_proj_trail.pfx",
+      "van": "/pa/effects/specs/uber_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/impacto_uber_proj_explosion.pfx",
+      "van": "/pa/effects/specs/uber_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/base_commander/base_commander_aa_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/base_commander/base_commander_torpedo_ammo_water.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/base_commander/base_commander_torpedo_ammo_land.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "base_commander/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/base_commander/base_commander_ammo_laser.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "imperial_aceal/estela_laser_blast_proj_trail.pfx",
+      "van": "/pa/effects/specs/laser_blast_proj_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/commanders/raptor_unicorn/raptor_unicorn.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1}",
+    "efectos": [
+     {
+      "id": "raptor_unicorn/fogonazo_raptor_unicorn_muzzle_flash.pfx",
+      "van": "/pa/units/commanders/raptor_unicorn/raptor_unicorn_muzzle_flash.pfx"
+     },
+     {
+      "id": "raptor_unicorn/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "aa_missile_vehicle/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "aa_missile_vehicle/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "aa_missile_vehicle/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "aa_missile_vehicle/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/air_defense/air_defense.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle {2}",
+    "efectos": [
+     {
+      "id": "air_defense/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "air_defense/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "air_defense/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/air_defense/air_defense_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "air_defense/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "air_defense/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/air_defense_adv/air_defense_adv.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle01 {1} socket_leftMuzzle01 {2} socket_rightMuzzle02 {3} socket_leftMuzzle02 {4}",
+    "efectos": [
+     {
+      "id": "air_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "air_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "air_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "air_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "air_defense_adv/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/air_defense_adv/air_defense_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "air_defense_adv/estela_air_defense_adv_ammo_beam.pfx",
+      "van": "/pa/units/land/air_defense_adv/air_defense_adv_ammo_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "air_defense_adv/impacto_default_proj_flak_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_flak_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "anti_nuke_launcher/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "anti_nuke_launcher/estela_anti_nuke_launcher_ammo_trail.pfx",
+      "van": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "anti_nuke_launcher/impacto_anti_nuke_launcher_ammo_explosion.pfx",
+      "van": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/artillery_long/artillery_long.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "artillery_long/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "artillery_long/fogonazo_artillery_muzzle_ground.pfx",
+      "van": "/pa/effects/specs/artillery_muzzle_ground.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/artillery_long/artillery_long_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "artillery_long/estela_shell_artillery_large_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "artillery_long/impacto_default_building_explosion.pfx",
+      "van": "/pa/effects/specs/default_building_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/artillery_short/artillery_short.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "artillery_short/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "artillery_short/fogonazo_artillery_muzzle_ground.pfx",
+      "van": "/pa/effects/specs/artillery_muzzle_ground.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/artillery_short/artillery_short_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "artillery_short/estela_shell_artillery_large_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "artillery_short/impacto_default_explosion.pfx",
+      "van": "/pa/effects/specs/default_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/assault_bot/assault_bot.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle {2}",
+    "efectos": [
+     {
+      "id": "assault_bot/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "assault_bot/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "assault_bot/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/assault_bot/assault_bot_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/assault_bot_adv/assault_bot_adv.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle {2}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "assault_bot_adv/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "assault_bot_adv/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/assault_bot_adv/assault_bot_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/estela_assault_bot_adv_ammo_trail.pfx",
+      "van": "/pa/units/land/assault_bot_adv/assault_bot_adv_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/assault_bot_adv/assault_bot_adv_torpedo_ammo_water.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/assault_bot_adv/assault_bot_adv_torpedo_ammo_land.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "assault_bot_adv/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_aa/bot_aa.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_leftMuzzle {1} socket_rightMuzzle {2}",
+    "efectos": [
+     {
+      "id": "bot_aa/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_aa/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_aa/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_aa/bot_aa_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_aa/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_aa/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_grenadier/bot_grenadier.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle {2}",
+    "efectos": [
+     {
+      "id": "bot_grenadier/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_grenadier/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_grenadier/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_grenadier/bot_grenadier_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_grenadier/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_grenadier/impacto_default_explosion.pfx",
+      "van": "/pa/effects/specs/default_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_sniper/bot_sniper.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "bot_sniper/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_sniper/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01 {1}",
+    "efectos": [
+     {
+      "id": "bot_sniper/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_sniper/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle02 {1}",
+    "efectos": [
+     {
+      "id": "bot_sniper/fogonazo_bot_sniper_beam_flash.pfx",
+      "van": "/pa/units/land/bot_sniper/bot_sniper_beam_flash.pfx"
+     },
+     {
+      "id": "bot_sniper/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_sniper/bot_sniper_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_sniper/estela_shell_artillery_large_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_sniper/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_sniper/bot_sniper_beam_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_sniper/estela_bot_sniper_beam.pfx",
+      "van": "/pa/units/land/bot_sniper/bot_sniper_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_sniper/impacto_bot_sniper_beam_hit.pfx",
+      "van": "/pa/units/land/bot_sniper/bot_sniper_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_spider_adv/bot_spider_adv.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "bot_spider_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_spider_adv/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_spider_adv/bot_spider_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_spider_adv/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_spider_adv/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_tactical_missile/bot_tactical_missile.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_leftMuzzle {1} socket_rightMuzzle {2}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_tactical_missile/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_tactical_missile/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_tactical_missile/bot_tactical_missile_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/estela_missile_tactical_trail.pfx",
+      "van": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/impacto_default_proj_area_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_area_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_tactical_missile/bot_tactical_missile_ammo_orbital.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/estela_missile_tactical_trail.pfx",
+      "van": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/impacto_default_proj_area_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_area_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_tactical_missile/bot_tactical_missile_antidrop_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/estela_ion_defense_antidrop_ammo_trail.pfx",
+      "van": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tactical_missile/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/land_scout/land_scout.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "land_scout/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/laser_defense/laser_defense.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle {2}",
+    "efectos": [
+     {
+      "id": "laser_defense/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "laser_defense/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "laser_defense/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/laser_defense/laser_defense_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "laser_defense/estela_laser_defense_ammo_trail.pfx",
+      "van": "/pa/units/land/laser_defense/laser_defense_ammo_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/laser_defense_adv/laser_defense_adv.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_centerMuzzle {2} socket_leftMuzzle {3}",
+    "efectos": [
+     {
+      "id": "laser_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "laser_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "laser_defense_adv/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "laser_defense_adv/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/laser_defense_adv/laser_defense_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "laser_defense_adv/estela_laser_defense_adv_ammo_trail.pfx",
+      "van": "/pa/units/land/laser_defense_adv/laser_defense_adv_ammo_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/laser_defense_single/laser_defense_single.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "laser_defense_single/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "laser_defense_single/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/laser_defense_single/laser_defense_single_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "laser_defense_single/estela_laser_defense_single_ammo_trail.pfx",
+      "van": "/pa/units/land/laser_defense_single/laser_defense_single_ammo_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/nuke_launcher/nuke_launcher.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} {1}",
+    "efectos": [
+     {
+      "id": "nuke_launcher/fogonazo_nuke_launcher_launch.pfx",
+      "van": "/pa/units/land/nuke_launcher/nuke_launcher_launch.pfx"
+     },
+     {
+      "id": "nuke_launcher/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/nuke_launcher/nuke_launcher_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuke_launcher/estela_missile_nuke_trail.pfx",
+      "van": "/pa/units/air/missile_nuke/missile_nuke_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} {1}",
+    "efectos": [
+     {
+      "id": "tactical_missile_launcher/fogonazo_tactical_missile_launcher_launch.pfx",
+      "van": "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher_launch.pfx"
+     },
+     {
+      "id": "tactical_missile_launcher/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tactical_missile_launcher/estela_missile_tactical_trail.pfx",
+      "van": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tactical_missile_launcher/impacto_default_proj_area_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_area_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tactical_missile_launcher/tactical_missile_antidrop_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tactical_missile_launcher/estela_ion_defense_antidrop_ammo_trail.pfx",
+      "van": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tactical_missile_launcher/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_armor/tank_armor.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "tank_armor/fogonazo_tank_armor_muzzle_flame.pfx",
+      "van": "/pa/units/land/tank_armor/tank_armor_muzzle_flame.pfx"
+     },
+     {
+      "id": "tank_armor/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_heavy_armor/tank_heavy_armor.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "tank_heavy_armor/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_heavy_armor/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_heavy_armor/tank_heavy_armor_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_heavy_armor/estela_uber_proj_trail.pfx",
+      "van": "/pa/effects/specs/uber_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_heavy_armor/impacto_uber_proj_explosion.pfx",
+      "van": "/pa/effects/specs/uber_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_heavy_mortar/tank_heavy_mortar.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_heavy_mortar/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_heavy_mortar/tank_heavy_mortar_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_heavy_mortar/estela_shell_artillery_small_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_artillery_small_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_heavy_mortar/impacto_default_explosion.pfx",
+      "van": "/pa/effects/specs/default_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_laser_adv/tank_laser_adv.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_leftMuzzleFlash {1} socket_rightMuzzleFlash {2}",
+    "efectos": [
+     {
+      "id": "tank_laser_adv/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_laser_adv/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_laser_adv/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_laser_adv/tank_laser_adv_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_laser_adv/estela_tank_laser_adv_proj_trail.pfx",
+      "van": "/pa/units/land/tank_laser_adv/tank_laser_adv_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_laser_adv/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_light_laser/tank_light_laser.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "tank_light_laser/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_light_laser/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_light_laser/tank_light_laser_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_light_laser/estela_tank_light_proj.pfx",
+      "van": "/pa/effects/specs/tank_light_proj.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_light_laser/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/unit_cannon/unit_cannon.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} bone_recoil02",
+    "efectos": [
+     {
+      "id": "unit_cannon/fogonazo_unit_cannon_fire.pfx",
+      "van": "/pa/units/land/unit_cannon/unit_cannon_fire.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/unit_cannon/unit_cannon_deploy.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "unit_cannon/estela_unit_shell_trail.pfx",
+      "van": "/pa/units/air/unit_shell/unit_shell_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "unit_cannon/impacto_unit_shell_deploy.pfx",
+      "van": "/pa/units/air/unit_shell/unit_shell_deploy.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/defense_satellite/defense_satellite_ammo_ground.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "defense_satellite/estela_defense_satellite_ammo_ground_beam.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_ground_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "defense_satellite/impacto_defense_satellite_ammo_ground_beam_hit.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_ground_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "defense_satellite/estela_defense_satellite_ammo_orbital_beam.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "defense_satellite/impacto_defense_satellite_ammo_orbital_beam_hit.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/ion_defense/ion_defense.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01",
+    "efectos": [
+     {
+      "id": "ion_defense/fogonazo_ion_defense_muzzle_flash.pfx",
+      "van": "/pa/units/orbital/ion_defense/ion_defense_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/ion_defense/ion_defense_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "ion_defense/estela_ion_defense_proj_trail.pfx",
+      "van": "/pa/units/orbital/ion_defense/ion_defense_proj_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "ion_defense/estela_ion_defense_antidrop_ammo_trail.pfx",
+      "van": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "ion_defense/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_fighter/orbital_fighter.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle",
+    "efectos": [
+     {
+      "id": "orbital_fighter/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_fighter/orbital_fighter_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_fighter/estela_laser_defense_adv_ammo_trail.pfx",
+      "van": "/pa/units/land/laser_defense_adv/laser_defense_adv_ammo_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_laser/orbital_laser.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle",
+    "efectos": [
+     {
+      "id": "orbital_laser/fogonazo_orbital_laser_muzzle_flash.pfx",
+      "van": "/pa/units/orbital/orbital_laser/orbital_laser_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_laser/orbital_laser_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_laser/estela_orbital_laser_ammo_beam.pfx",
+      "van": "/pa/units/orbital/orbital_laser/orbital_laser_ammo_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_laser/impacto_orbital_laser_ammo_beam_hit.pfx",
+      "van": "/pa/units/orbital/orbital_laser/orbital_laser_ammo_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/attack_sub/attack_sub_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "attack_sub/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "attack_sub/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/battleship/battleship.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle02 {1} socket_muzzle03 {2} socket_muzzle01 {3}",
+    "efectos": [
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle05 {1} socket_muzzle06 {2} socket_muzzle04 {3}",
+    "efectos": [
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired2",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle08 {1} socket_muzzle09 {2} socket_muzzle07 {3}",
+    "efectos": [
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired3",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle11 {1} socket_muzzle12 {2} socket_muzzle10 {3}",
+    "efectos": [
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "battleship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/battleship/battleship_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "battleship/estela_battleship_shell_proj_trail.pfx",
+      "van": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "battleship/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/destroyer/destroyer.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle01 {1} socket_leftMuzzle01",
+    "efectos": [
+     {
+      "id": "destroyer/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "destroyer/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle02 {1} socket_leftMuzzle02",
+    "efectos": [
+     {
+      "id": "destroyer/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "destroyer/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired2",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_torpedoMuzzle",
+    "efectos": [
+     {
+      "id": "destroyer/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/destroyer/destroyer_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "destroyer/estela_battleship_shell_proj_trail.pfx",
+      "van": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "destroyer/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/frigate/frigate.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01",
+    "efectos": [
+     {
+      "id": "frigate/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle02 {1} socket_rightMuzzle02",
+    "efectos": [
+     {
+      "id": "frigate/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "frigate/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired2",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_torpedoMuzzle",
+    "efectos": [
+     {
+      "id": "frigate/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/frigate/frigate_ammo_shell.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "frigate/estela_battleship_shell_proj_trail.pfx",
+      "van": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "frigate/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/frigate/frigate_ammo_aa.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "frigate/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "frigate/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/frigate/frigate_ammo_torpedo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "frigate/estela_frigate_ammo_torpedo_trail.pfx",
+      "van": "/pa/units/sea/frigate/frigate_ammo_torpedo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "frigate/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/missile_ship/missile_ship_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "missile_ship/estela_missile_tactical_trail.pfx",
+      "van": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "missile_ship/impacto_default_proj_area_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_area_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/missile_ship/missile_ship_aa_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "missile_ship/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "missile_ship/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/missile_ship/missile_ship_antidrop_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "missile_ship/estela_ion_defense_antidrop_ammo_trail.pfx",
+      "van": "/pa/units/orbital/ion_defense/ion_defense_antidrop_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "missile_ship/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/nuclear_sub/nuclear_sub.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01 {1}",
+    "efectos": [
+     {
+      "id": "nuclear_sub/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "nuclear_sub/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/nuclear_sub/nuclear_sub_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuclear_sub/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuclear_sub/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/nuclear_sub/nuclear_sub_ammo_missile.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuclear_sub/estela_missile_tactical_trail.pfx",
+      "van": "/pa/units/air/missile_tactical/missile_tactical_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuclear_sub/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/sea_scout/sea_scout_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "sea_scout/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "sea_scout/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/torpedo_launcher/torpedo_launcher_ammo_water.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/torpedo_launcher/torpedo_launcher_ammo_land.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/torpedo_launcher_adv/torpedo_launcher_adv_ammo_water.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher_adv/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher_adv/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/torpedo_launcher_adv/torpedo_launcher_adv_ammo_land.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher_adv/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "torpedo_launcher_adv/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/bomber_heavy/bomber_heavy_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bomber_heavy/estela_shell_artillery_large_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bomber_heavy/impacto_bomber_heavy_attack.pfx",
+      "van": "/pa/units/air/bomber_heavy/bomber_heavy_attack.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/solar_drone/solar_drone.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} bone_leftWing01 {1} bone_rightWing01",
+    "efectos": [
+     {
+      "id": "solar_drone/fogonazo_solar_drone_muzzle_flash.pfx",
+      "van": "/pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx"
+     },
+     {
+      "id": "solar_drone/fogonazo_solar_drone_muzzle_flash.pfx",
+      "van": "/pa/units/air/solar_drone/solar_drone_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/solar_drone/solar_drone_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "solar_drone/estela_solar_drone_ammo_beam.pfx",
+      "van": "/pa/units/air/solar_drone/solar_drone_ammo_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "solar_drone/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "sim_impact_effect"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "solar_drone/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/strafer/strafer.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01 {1} socket_muzzle02 {2} socket_muzzle03 {3} socket_muzzle04",
+    "efectos": [
+     {
+      "id": "strafer/fogonazo_strafer_muzzle_flash.pfx",
+      "van": "/pa/units/air/strafer/strafer_muzzle_flash.pfx"
+     },
+     {
+      "id": "strafer/fogonazo_strafer_muzzle_flash.pfx",
+      "van": "/pa/units/air/strafer/strafer_muzzle_flash.pfx"
+     },
+     {
+      "id": "strafer/fogonazo_strafer_muzzle_flash.pfx",
+      "van": "/pa/units/air/strafer/strafer_muzzle_flash.pfx"
+     },
+     {
+      "id": "strafer/fogonazo_strafer_muzzle_flash.pfx",
+      "van": "/pa/units/air/strafer/strafer_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/strafer/strafer_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "strafer/estela_strafer_ammo_trail.pfx",
+      "van": "/pa/units/air/strafer/strafer_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "strafer/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/support_platform/support_platform.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle02",
+    "efectos": [
+     {
+      "id": "support_platform/fogonazo_bot_sniper_beam_flash.pfx",
+      "van": "/pa/units/land/bot_sniper/bot_sniper_beam_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/support_platform/support_platform_interception_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "support_platform/estela_bot_sniper_beam.pfx",
+      "van": "/pa/units/land/bot_sniper/bot_sniper_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "support_platform/impacto_bot_sniper_beam_hit.pfx",
+      "van": "/pa/units/land/bot_sniper/bot_sniper_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/titan_air/titan_air.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle_center",
+    "efectos": [
+     {
+      "id": "titan_air/fogonazo_titan_air_muzzle_flash.pfx",
+      "van": "/pa/units/air/titan_air/titan_air_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/air/titan_air/titan_air_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_air/estela_titan_air_ammo_beam.pfx",
+      "van": "/pa/units/air/titan_air/titan_air_ammo_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_air/impacto_titan_air_ammo_beam_hit.pfx",
+      "van": "/pa/units/air/titan_air/titan_air_ammo_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/artillery_unit_launcher/artillery_unit_launcher.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle",
+    "efectos": [
+     {
+      "id": "artillery_unit_launcher/fogonazo_artillery_unit_launcher_fire.pfx",
+      "van": "/pa/units/land/artillery_unit_launcher/artillery_unit_launcher_fire.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/artillery_unit_launcher/artillery_unit_launcher_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "artillery_unit_launcher/estela_shell_artillery_large_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_artillery_large_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "artillery_unit_launcher/impacto_unit_shell_deploy.pfx",
+      "van": "/pa/units/air/unit_shell/unit_shell_deploy.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/attack_vehicle/attack_vehicle.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01 {1} socket_muzzle02 {2}",
+    "efectos": [
+     {
+      "id": "attack_vehicle/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "attack_vehicle/fogonazo_default_small_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_small_muzzle_flash.pfx"
+     },
+     {
+      "id": "attack_vehicle/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/attack_vehicle/attack_vehicle_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "attack_vehicle/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "attack_vehicle/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_nanoswarm/bot_nanoswarm.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_nanoswarm/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_nanoswarm/bot_nanoswarm_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_nanoswarm/estela_nanoswarm_attack.pfx",
+      "van": "/pa/effects/specs/nanoswarm_attack.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_nanoswarm/impacto_nanoswarm_hit.pfx",
+      "van": "/pa/effects/specs/nanoswarm_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_support_commander/bot_support_commander.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1}",
+    "efectos": [
+     {
+      "id": "bot_support_commander/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_support_commander/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_support_commander/bot_support_commander_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_support_commander/estela_rocket_proj_trail_small.pfx",
+      "van": "/pa/effects/specs/rocket_proj_trail_small.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_support_commander/impacto_default_explosion.pfx",
+      "van": "/pa/effects/specs/default_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_tesla/bot_tesla.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle {1} socket_leftMuzzle {2}",
+    "efectos": [
+     {
+      "id": "bot_tesla/fogonazo_tesla_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tesla_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_tesla/fogonazo_tesla_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tesla_muzzle_flash.pfx"
+     },
+     {
+      "id": "bot_tesla/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_tesla/bot_tesla_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tesla/estela_tesla_proj_trail.pfx",
+      "van": "/pa/effects/specs/tesla_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_tesla/impacto_tesla_hit.pfx",
+      "van": "/pa/effects/specs/tesla_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_flak/tank_flak.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01 {1} socket_muzzle02 {2} socket_muzzle03 {3} socket_muzzle04 {4}",
+    "efectos": [
+     {
+      "id": "tank_flak/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_flak/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_flak/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_flak/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_flak/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_flak/tank_flak_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_flak/estela_shell_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_flak/impacto_flak_tank_explosion.pfx",
+      "van": "/pa/units/land/tank_flak/flak_tank_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_hover/tank_hover.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle {1}",
+    "efectos": [
+     {
+      "id": "tank_hover/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "tank_hover/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_hover/tank_hover_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_hover/estela_tank_light_proj.pfx",
+      "van": "/pa/effects/specs/tank_light_proj.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_hover/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_nuke/tank_nuke.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "tank_nuke/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/titan_bot/titan_bot.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_bot/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/titan_structure/titan_structure.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_structure/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/titan_vehicle/titan_vehicle.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} bone_main_recoil {1}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/fogonazo_titan_vehicle_main_muzzle_flash.pfx",
+      "van": "/pa/units/land/titan_vehicle/titan_vehicle_main_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_left_muzzle01 {1} socket_left_muzzle02 {2}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired2",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_right_muzzle01 {1} socket_right_muzzle02 {2}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired3",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rear_muzzle01 {1} socket_rear_muzzle02 {2}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "titan_vehicle/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/titan_vehicle/titan_vehicle_ammo_main.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/estela_titan_vehicle_ammo_main_proj_trail.pfx",
+      "van": "/pa/units/land/titan_vehicle/titan_vehicle_ammo_main_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/titan_vehicle/titan_vehicle_ammo_side.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/estela_shell_proj_trail.pfx",
+      "van": "/pa/effects/specs/shell_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_vehicle/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_battleship/orbital_battleship.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle01 {1} socket_muzzle02",
+    "efectos": [
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle03 {1} socket_muzzle04",
+    "efectos": [
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired2",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle05 {1} socket_muzzle06",
+    "efectos": [
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired3",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle07 {1} socket_muzzle08",
+    "efectos": [
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "orbital_battleship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_battleship/orbital_battleship_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_battleship/estela_defense_satellite_ammo_orbital_beam.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_battleship/impacto_defense_satellite_ammo_orbital_beam_hit.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_battleship/orbital_battleship_ammo_ground.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_battleship/estela_orbital_laser_ammo_beam.pfx",
+      "van": "/pa/units/orbital/orbital_laser/orbital_laser_ammo_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_battleship/impacto_defense_satellite_ammo_orbital_beam_hit.pfx",
+      "van": "/pa/units/orbital/defense_satellite/defense_satellite_ammo_orbital_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_railgun/orbital_railgun.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle",
+    "efectos": [
+     {
+      "id": "orbital_railgun/fogonazo_orbital_railgun_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/orbital_railgun_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_railgun/orbital_railgun_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_railgun/estela_orbital_railgun_beam.pfx",
+      "van": "/pa/effects/specs/orbital_railgun_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "orbital_railgun/impacto_orbital_railgun_hit.pfx",
+      "van": "/pa/effects/specs/orbital_railgun_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/titan_orbital/titan_orbital_ammo.json": [
+   {
+    "ruta": [
+     "fx_beam_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_orbital/estela_titan_orbital_ammo_beam.pfx",
+      "van": "/pa/units/orbital/titan_orbital/titan_orbital_ammo_beam.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "fx_collision_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_orbital/impacto_titan_orbital_beam_hit.pfx",
+      "van": "/pa/units/orbital/titan_orbital/titan_orbital_beam_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/drone_carrier/carrier/carrier.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} bone_root {1}",
+    "efectos": [
+     {
+      "id": "carrier/fogonazo_carrier_drone_launch.pfx",
+      "van": "/pa/units/sea/drone_carrier/carrier/carrier_drone_launch.pfx"
+     },
+     {
+      "id": "carrier/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/drone_carrier/carrier/carrier_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "carrier/estela_carrier_ammo_trail.pfx",
+      "van": "/pa/units/sea/drone_carrier/carrier/carrier_ammo_trail.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/drone_carrier/drone/drone_ammo_torpedo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "drone/estela_torpedo_proj_trail.pfx",
+      "van": "/pa/effects/specs/torpedo_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "drone/impacto_default_torpedo_explosion.pfx",
+      "van": "/pa/effects/specs/default_torpedo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/drone_carrier/drone/drone_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "drone/estela_drone_ammo_trail.pfx",
+      "van": "/pa/units/sea/drone_carrier/drone/drone_ammo_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "drone/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/hover_ship/hover_ship.json": [
+   {
+    "ruta": [
+     "events",
+     "fired0",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle01 {1} socket_leftMuzzle01 {2}",
+    "efectos": [
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired1",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle02 {1} socket_leftMuzzle02 {2}",
+    "efectos": [
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired2",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle03 {1} socket_leftMuzzle03 {2}",
+    "efectos": [
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "fired3",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_rightMuzzle04 {1} socket_leftMuzzle04 {2}",
+    "efectos": [
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/fogonazo_tank_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/tank_muzzle_flash.pfx"
+     },
+     {
+      "id": "hover_ship/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/hover_ship/hover_ship_ammo.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "hover_ship/estela_battleship_shell_proj_trail.pfx",
+      "van": "/pa/units/sea/battleship/battleship_shell_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "hover_ship/impacto_battleship_hit.pfx",
+      "van": "/pa/units/sea/battleship/battleship_hit.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/sea/hover_ship/hover_ship_ammo_side.json": [
+   {
+    "ruta": [
+     "fx_trail",
+     "filename"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "hover_ship/estela_bullet_proj_trail.pfx",
+      "van": "/pa/effects/specs/bullet_proj_trail.pfx"
+     }
+    ]
+   },
+   {
+    "ruta": [
+     "events",
+     "died",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "hover_ship/impacto_default_proj_explosion.pfx",
+      "van": "/pa/effects/specs/default_proj_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/orbital_mine/orbital_mine.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} socket_muzzle",
+    "efectos": [
+     {
+      "id": "orbital_mine/fogonazo_default_muzzle_flash.pfx",
+      "van": "/pa/effects/specs/default_muzzle_flash.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/tank_anti_nuke/tank_anti_nuke.json": [
+   {
+    "ruta": [
+     "events",
+     "fired",
+     "effect_spec"
+    ],
+    "plantilla": "{0} bone_muzzle2 {1}",
+    "efectos": [
+     {
+      "id": "tank_anti_nuke/fogonazo_tactical_missile_launcher_launch.pfx",
+      "van": "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher_launch.pfx"
+     },
+     {
+      "id": "tank_anti_nuke/suelo_disparo.pfx",
+      "van": null
+     }
+    ]
+   }
+  ],
+  "/pa/ammo/mine_pbaoe/mine_pbaoe.json": [
+   {
+    "ruta": [
+     "sim_fire_effect"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "mine_pbaoe/impacto_default_explosion.pfx",
+      "van": "/pa/effects/specs/default_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/effects/specs/default_commander_explosion_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuke_pbaoe/impacto_default_commander_explosion.pfx",
+      "van": "/pa/effects/specs/default_commander_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/effects/specs/default_commander_explosion_air_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuke_pbaoe/impacto_default_commander_explosion_air.pfx",
+      "van": "/pa/effects/specs/default_commander_explosion_air.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/bot_bomb/bot_bomb_ammo_explosion_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "bot_bomb/impacto_bot_bomb_ammo_explosion.pfx",
+      "van": "/pa/units/land/bot_bomb/bot_bomb_ammo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/land_mine/land_mine_ammo_explosion_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "land_mine/impacto_land_mine_ammo_explosion.pfx",
+      "van": "/pa/units/land/land_mine/land_mine_ammo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/nuke_launcher/nuke_launcher_ammo_explosion_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "nuke_launcher/impacto_nuke_launcher_ammo_explosion.pfx",
+      "van": "/pa/units/land/nuke_launcher/nuke_launcher_ammo_explosion.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/land/titan_bot/titan_bot_stomp_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_bot/impacto_titan_bot_attack.pfx",
+      "van": "/pa/units/land/titan_bot/titan_bot_attack.pfx"
+     }
+    ]
+   }
+  ],
+  "/pa/units/orbital/titan_orbital/titan_orbital_death_fall_ent.json": [
+   {
+    "ruta": [
+     "spawn_response",
+     "effect_spec"
+    ],
+    "plantilla": "{0}",
+    "efectos": [
+     {
+      "id": "titan_orbital/impacto_titan_air_death_fall.pfx",
+      "van": "/pa/units/air/titan_air/titan_air_death_fall.pfx"
+     }
+    ]
+   }
+  ]
+ },
+ "unidades": {
+  "bomber": {
+   "nombre": "Bumblebee",
+   "familia": "explosiva",
+   "tipo": "aerea"
+  },
+  "bomber_adv": {
+   "nombre": "Hornet",
+   "familia": "explosiva",
+   "tipo": "aerea"
+  },
+  "fighter": {
+   "nombre": "Hummingbird",
+   "familia": "antiaereo",
+   "tipo": "aerea"
+  },
+  "fighter_adv": {
+   "nombre": "Phoenix",
+   "familia": "antiaereo",
+   "tipo": "aerea"
+  },
+  "gunship": {
+   "nombre": "Kestrel",
+   "familia": "balistica",
+   "tipo": "aerea"
+  },
+  "base_commander": {
+   "nombre": "Base Commander",
+   "familia": "balistica",
+   "tipo": "comandante",
+   "comparten": 81
+  },
+  "imperial_aceal": {
+   "nombre": "Laser commanders",
+   "familia": "laser",
+   "tipo": "comandante",
+   "comparten": 36
+  },
+  "raptor_unicorn": {
+   "nombre": "Unicorn Commander",
+   "familia": "balistica",
+   "tipo": "comandante"
+  },
+  "aa_missile_vehicle": {
+   "nombre": "Spinner",
+   "familia": "antiaereo",
+   "tipo": "tierra"
+  },
+  "air_defense": {
+   "nombre": "Galata Turret",
+   "familia": "antiaereo",
+   "tipo": "estructura"
+  },
+  "air_defense_adv": {
+   "nombre": "Flak Cannon",
+   "familia": "antiaereo",
+   "tipo": "estructura"
+  },
+  "anti_nuke_launcher": {
+   "nombre": "Anti-Nuke Launcher",
+   "familia": "misil",
+   "tipo": "estructura",
+   "con": [
+    "Ward"
+   ]
+  },
+  "artillery_long": {
+   "nombre": "Holkins",
+   "familia": "explosiva",
+   "tipo": "estructura"
+  },
+  "artillery_short": {
+   "nombre": "Pelter",
+   "familia": "explosiva",
+   "tipo": "estructura"
+  },
+  "assault_bot": {
+   "nombre": "Dox",
+   "familia": "balistica",
+   "tipo": "tierra",
+   "con": [
+    "Manhattan"
+   ]
+  },
+  "assault_bot_adv": {
+   "nombre": "Slammer",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "bot_aa": {
+   "nombre": "Stinger",
+   "familia": "antiaereo",
+   "tipo": "tierra"
+  },
+  "bot_grenadier": {
+   "nombre": "Grenadier",
+   "familia": "explosiva",
+   "tipo": "tierra"
+  },
+  "bot_sniper": {
+   "nombre": "Gil-E",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "bot_spider_adv": {
+   "nombre": "Recluse",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "bot_tactical_missile": {
+   "nombre": "Bluehawk",
+   "familia": "misil",
+   "tipo": "tierra"
+  },
+  "land_scout": {
+   "nombre": "Skitter",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "laser_defense": {
+   "nombre": "Laser Defense Tower",
+   "familia": "laser",
+   "tipo": "estructura"
+  },
+  "laser_defense_adv": {
+   "nombre": "Advanced Laser Defense Tower",
+   "familia": "laser",
+   "tipo": "estructura"
+  },
+  "laser_defense_single": {
+   "nombre": "Single Laser Defense Tower",
+   "familia": "laser",
+   "tipo": "estructura"
+  },
+  "nuke_launcher": {
+   "nombre": "Nuclear Missile Launcher",
+   "familia": "misil",
+   "tipo": "estructura"
+  },
+  "tactical_missile_launcher": {
+   "nombre": "Catapult",
+   "familia": "misil",
+   "tipo": "estructura"
+  },
+  "tank_armor": {
+   "nombre": "Inferno",
+   "familia": "fuego",
+   "tipo": "tierra"
+  },
+  "tank_heavy_armor": {
+   "nombre": "Vanguard",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "tank_heavy_mortar": {
+   "nombre": "Sheller",
+   "familia": "explosiva",
+   "tipo": "tierra"
+  },
+  "tank_laser_adv": {
+   "nombre": "Leveler",
+   "familia": "laser",
+   "tipo": "tierra"
+  },
+  "tank_light_laser": {
+   "nombre": "Ant",
+   "familia": "laser",
+   "tipo": "tierra"
+  },
+  "unit_cannon": {
+   "nombre": "Unit Cannon",
+   "familia": "balistica",
+   "tipo": "estructura"
+  },
+  "defense_satellite": {
+   "nombre": "Anchor",
+   "familia": "laser",
+   "tipo": "estructura"
+  },
+  "ion_defense": {
+   "nombre": "Umbrella",
+   "familia": "misil",
+   "tipo": "estructura"
+  },
+  "orbital_fighter": {
+   "nombre": "Avenger",
+   "familia": "antiaereo",
+   "tipo": "orbital"
+  },
+  "orbital_laser": {
+   "nombre": "SXX-1304 Laser Platform",
+   "familia": "energia",
+   "tipo": "orbital"
+  },
+  "attack_sub": {
+   "nombre": "Barracuda",
+   "familia": "torpedo",
+   "tipo": "naval"
+  },
+  "battleship": {
+   "nombre": "Leviathan",
+   "familia": "explosiva",
+   "tipo": "naval"
+  },
+  "destroyer": {
+   "nombre": "Orca",
+   "familia": "balistica",
+   "tipo": "naval"
+  },
+  "frigate": {
+   "nombre": "Narwhal",
+   "familia": "balistica",
+   "tipo": "naval"
+  },
+  "missile_ship": {
+   "nombre": "Stingray",
+   "familia": "misil",
+   "tipo": "naval"
+  },
+  "nuclear_sub": {
+   "nombre": "Kraken",
+   "familia": "torpedo",
+   "tipo": "naval"
+  },
+  "sea_scout": {
+   "nombre": "Piranha",
+   "familia": "balistica",
+   "tipo": "naval"
+  },
+  "torpedo_launcher": {
+   "nombre": "Torpedo Launcher",
+   "familia": "torpedo",
+   "tipo": "estructura"
+  },
+  "torpedo_launcher_adv": {
+   "nombre": "Advanced Torpedo Launcher",
+   "familia": "torpedo",
+   "tipo": "estructura"
+  },
+  "bomber_heavy": {
+   "nombre": "Wyrm",
+   "familia": "explosiva",
+   "tipo": "aerea"
+  },
+  "solar_drone": {
+   "nombre": "Icarus",
+   "familia": "energia",
+   "tipo": "aerea"
+  },
+  "strafer": {
+   "nombre": "Horsefly",
+   "familia": "balistica",
+   "tipo": "aerea"
+  },
+  "support_platform": {
+   "nombre": "Angel",
+   "familia": "misil",
+   "tipo": "aerea"
+  },
+  "titan_air": {
+   "nombre": "Zeus",
+   "familia": "energia",
+   "tipo": "aerea"
+  },
+  "artillery_unit_launcher": {
+   "nombre": "Lob",
+   "familia": "explosiva",
+   "tipo": "estructura"
+  },
+  "attack_vehicle": {
+   "nombre": "Stryker",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "bot_nanoswarm": {
+   "nombre": "Locusts",
+   "familia": "laser",
+   "tipo": "tierra"
+  },
+  "bot_support_commander": {
+   "nombre": "Colonel",
+   "familia": "antiaereo",
+   "tipo": "tierra"
+  },
+  "bot_tesla": {
+   "nombre": "Spark",
+   "familia": "energia",
+   "tipo": "tierra"
+  },
+  "tank_flak": {
+   "nombre": "Storm",
+   "familia": "antiaereo",
+   "tipo": "tierra"
+  },
+  "tank_hover": {
+   "nombre": "Drifter",
+   "familia": "balistica",
+   "tipo": "tierra"
+  },
+  "tank_nuke": {
+   "nombre": "Manhattan",
+   "familia": "balistica",
+   "tipo": "tierra",
+   "usa": [
+    "assault_bot"
+   ],
+   "compartidos": [
+    "assault_bot/estela_bullet_proj_trail.pfx",
+    "assault_bot/impacto_default_proj_explosion.pfx"
+   ]
+  },
+  "titan_bot": {
+   "nombre": "Atlas",
+   "familia": "explosiva",
+   "tipo": "tierra",
+   "con": [
+    "Tutorial Titan Commander"
+   ]
+  },
+  "titan_structure": {
+   "nombre": "Ragnarok",
+   "familia": "explosiva",
+   "tipo": "estructura"
+  },
+  "titan_vehicle": {
+   "nombre": "Ares",
+   "familia": "explosiva",
+   "tipo": "tierra"
+  },
+  "orbital_battleship": {
+   "nombre": "Omega",
+   "familia": "laser",
+   "tipo": "orbital"
+  },
+  "orbital_railgun": {
+   "nombre": "Artemis",
+   "familia": "energia",
+   "tipo": "orbital"
+  },
+  "titan_orbital": {
+   "nombre": "Helios",
+   "familia": "energia",
+   "tipo": "orbital"
+  },
+  "carrier": {
+   "nombre": "Typhoon",
+   "familia": "balistica",
+   "tipo": "naval"
+  },
+  "drone": {
+   "nombre": "Squall",
+   "familia": "torpedo",
+   "tipo": "naval"
+  },
+  "hover_ship": {
+   "nombre": "Kaiju",
+   "familia": "balistica",
+   "tipo": "naval"
+  },
+  "orbital_mine": {
+   "nombre": "Kessler",
+   "familia": "balistica",
+   "tipo": "estructura"
+  },
+  "tank_anti_nuke": {
+   "nombre": "Ward",
+   "familia": "misil",
+   "tipo": "tierra",
+   "usa": [
+    "anti_nuke_launcher"
+   ],
+   "compartidos": [
+    "anti_nuke_launcher/estela_anti_nuke_launcher_ammo_trail.pfx",
+    "anti_nuke_launcher/impacto_anti_nuke_launcher_ammo_explosion.pfx"
+   ]
+  },
+  "mine_pbaoe": {
+   "nombre": "Mine explosion",
+   "familia": "explosiva",
+   "tipo": "otros",
+   "con": [
+    "Land Mine"
+   ]
+  },
+  "nuke_pbaoe": {
+   "nombre": "Nuke explosion",
+   "familia": "explosiva",
+   "tipo": "otros"
+  },
+  "bot_bomb": {
+   "nombre": "Boom",
+   "familia": "explosiva",
+   "tipo": "tierra"
+  },
+  "land_mine": {
+   "nombre": "Land Mine",
+   "familia": "explosiva",
+   "tipo": "estructura",
+   "usa": [
+    "mine_pbaoe"
+   ],
+   "compartidos": [
+    "mine_pbaoe/impacto_default_explosion.pfx"
+   ]
+  }
+ }
+}
