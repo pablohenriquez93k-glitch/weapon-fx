@@ -7,6 +7,8 @@
 - Smaller download: each effect file is shipped once (73 MB → 29 MB).
 - Skin names and the new options are translated into all 11 UI languages.
 - License: MIT for our own work.
+- Clean pa-mod-review: removed 6 misspelled particle keys copied from vanilla effects (the game ignored them, so
+  nothing changes on screen), lowercase texture names, and `ui/mods/` folder named after the identifier.
 
 ## 0.4.0-preview (2026-09-26)
 - First skins: Plasma and Robotic.

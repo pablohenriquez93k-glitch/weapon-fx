@@ -16,22 +16,22 @@
   ],
   "scenes": {
     "settings": [
-      "coui://ui/mods/weaponfx/idiomas.js",
-      "coui://ui/mods/weaponfx/opciones.js",
-      "coui://ui/mods/weaponfx/editor_personalizado.js",
-      "coui://ui/mods/weaponfx/ajustes_menu.js"
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/idiomas.js",
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/opciones.js",
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/editor_personalizado.js",
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/ajustes_menu.js"
     ],
     "new_game": [
-      "coui://ui/mods/weaponfx/opciones.js",
-      "coui://ui/mods/weaponfx/montaje.js"
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/opciones.js",
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/montaje.js"
     ],
     "connect_to_game": [
-      "coui://ui/mods/weaponfx/opciones.js",
-      "coui://ui/mods/weaponfx/montaje.js"
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/opciones.js",
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/montaje.js"
     ],
     "live_game": [
-      "coui://ui/mods/weaponfx/opciones.js",
-      "coui://ui/mods/weaponfx/montaje.js"
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/opciones.js",
+      "coui://ui/mods/com.pa.pabloandclaude.weaponfx/montaje.js"
     ]
   }
 }
