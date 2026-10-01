@@ -10,6 +10,10 @@
     var BASE = 'coui://ui/mods/weaponfx/';
     var MARCA = '/ui/mods/weaponfx/montado.json';   // ruta que no existe en el mod: solo vive en memoria
     var NIVEL_DEFECTO = 'alto';
+    var SIN_SKIN = 'ninguna';
+    // Color de equipo: copia de cada .pfx elegido con "useArmyColor": 1 en cada emisor (clave de EMISOR, como fab_spray.pfx;
+    // probado en la estela 2026-09-26). Vive solo en memoria bajo esta carpeta: el mod no trae archivos extra.
+    var EQUIPO = '/pa/effects/specs/wfx_equipo';
     var escena = (location.pathname.split('/').slice(-2, -1)[0]) || '?';
 
     function log(m) { console.log('[Weapon FX] ' + escena + ': ' + m); }
@@ -22,21 +26,47 @@
     // ---------- ajustes: {base, fam: {familia: nivel}, uni: {unidad: nivel}, uf: {'unidad|familia': nivel}, efe: {id: nivel}} ----------
     // Nivel: Settings > Weapon FX (grupo weapon_fx, clave level), guardado por el juego solo con Save.
     // "personalizado": base y excepciones en weapon_fx.custom (texto JSON de editor_personalizado.js; se guarda con Save).
+    // Skin (1.0.1): mismo esquema en a.skin = {base, fam, uni, uf, efe}; 'ninguna' = efectos Weapon FX sin skin.
+    // Fuera de Personalizado: grupo weapon_fx, clave skin. Un efecto compartido (p. ej. Dox y Manhattan) tiene un solo id.
+    function mapa(m, base) { m = m && typeof m === 'object' ? m : {}; return { base: m.base || base, fam: m.fam || {}, uni: m.uni || {}, uf: m.uf || {}, efe: m.efe || {} }; }
     WFX.ajustes = function () {
-        var nivel = NIVEL_DEFECTO;
+        var nivel = NIVEL_DEFECTO, skin = SIN_SKIN;
         try { nivel = api.settings.value('weapon_fx', 'level') || NIVEL_DEFECTO; } catch (e) { error('no pude leer el nivel: ' + e); }
-        if (nivel !== 'personalizado') { return { base: nivel, fam: {}, uni: {}, uf: {}, efe: {} }; }
+        try { skin = api.settings.value('weapon_fx', 'skin') || SIN_SKIN; } catch (e) { error('no pude leer la skin: ' + e); }
+        var equipo = false;
+        try { equipo = api.settings.value('weapon_fx', 'team_color') === 'ON'; } catch (e) { error('no pude leer el color de equipo: ' + e); }
+        if (nivel !== 'personalizado') { var r = mapa({}, nivel); r.skin = mapa({}, skin); r.equipo = equipo; return r; }
         var a = null;
         try { a = JSON.parse(api.settings.value('weapon_fx', 'custom') || 'null'); } catch (e) { error('personalizado ilegible: ' + e); }
         a = a && typeof a === 'object' ? a : {};
-        return { base: a.base || NIVEL_DEFECTO, fam: a.fam || {}, uni: a.uni || {}, uf: a.uf || {}, efe: a.efe || {} };
+        var out = mapa(a, NIVEL_DEFECTO);
+        out.skin = mapa(a.skin, skin);
+        out.equipo = equipo;
+        return out;
     };
-    WFX.nivelDe = function (id, cat, a) {
+    function elegir(m, id, cat) {
         var d = cat.efectos[id] || {};
         // efecto -> familia dentro de la unidad -> unidad -> familia general -> base
-        return a.efe[id] || a.uf[d.unidad + '|' + d.familia] || a.uni[d.unidad] || a.fam[d.familia] || a.base;
+        return m.efe[id] || m.uf[d.unidad + '|' + d.familia] || m.uni[d.unidad] || m.fam[d.familia] || m.base;
+    }
+    WFX.nivelDe = function (id, cat, a) { return elegir(a, id, cat); };
+    WFX.skinDe = function (id, cat, a) {
+        var s = a.skin ? elegir(a.skin, id, cat) : SIN_SKIN;
+        return s !== SIN_SKIN && cat.skins && cat.skins[s] ? s : SIN_SKIN;   // skin borrada del mod -> sin skin
     };
-    function firma(cat, a) { return cat.version + '|' + JSON.stringify([a.base, a.fam, a.uni, a.uf, a.efe]); }
+    // ruta del efecto: sin skin, Original = el del juego; con skin, Original = wfx/<skin>/original (si el juego lo tiene).
+    // El mod trae cada pfx distinto una vez (wfx/h/<huella>.pfx): el indice del catalogo dice cual toca a <skin>/<nivel>.
+    WFX.rutaDe = function (e, cat, a) {
+        var n = WFX.nivelDe(e.id, cat, a), s = WFX.skinDe(e.id, cat, a);
+        if (n === 'original' && (s === SIN_SKIN || !e.van)) { return e.van || ''; }
+        if (!cat.indice) {
+            cat.indice = {};
+            $.each(cat.rutas, function (i, r) { cat.indice[r] = i; });
+        }
+        var d = cat.efectos[e.id], h = d && d.r[cat.indice[(s === SIN_SKIN ? '' : s + '/') + n]];
+        return h === null || h === undefined ? (e.van || '') : cat.wfx + 'h/' + cat.pfx[h] + '.pfx';
+    };
+    function firma(cat, a) { return cat.version + '|' + JSON.stringify([a.base, a.fam, a.uni, a.uf, a.efe, a.skin, a.equipo]); }
 
     // ---------- catalogo ----------
     var catalogo = null;
@@ -63,14 +93,16 @@
         }, function () { return $.Deferred().resolve({}).promise(); });
     }
 
-    function armar(ruta, cambios, cat, a, cache) {
+    function armar(ruta, cambios, cat, a, cache, pfx) {
         return (cache[ruta] || (cache[ruta] = leer(ruta))).then(function (orig) {
             return fusion(ruta, cache).then(function (fus) {
                 var d = JSON.parse(JSON.stringify(orig));
                 $.each(cambios, function (_, c) {
                     var valores = $.map(c.efectos, function (e) {
-                        var n = WFX.nivelDe(e.id, cat, a);
-                        return [n === 'original' ? (e.van || '') : cat.wfx + n + '/' + e.id];
+                        var r = WFX.rutaDe(e, cat, a);
+                        if (!a.equipo || !r) { return [r]; }
+                        pfx[r] = true;
+                        return [EQUIPO + r];
                     });
                     var texto = c.plantilla.replace(/\{(\d+)\}/g, function (_, i) { return valores[+i]; }).split(/\s+/).join(' ').trim();
                     var nodo = d, her = fus;
@@ -89,25 +121,41 @@
         });
     }
 
+    // ---------- color de equipo ----------
+    // Lee cada .pfx elegido (del mod o del juego), pone useArmyColor en cada emisor y lo agrega a archivos con la ruta EQUIPO.
+    // Si un .pfx no se puede leer, el efecto queda sin dibujarse: se avisa en el log.
+    function equipo(pfx, archivos, fallidos) {
+        var rutas = Object.keys(pfx);
+        if (!rutas.length) { return $.Deferred().resolve().promise(); }
+        return $.when.apply($, $.map(rutas, function (r) {
+            return leer(r).then(function (d) {
+                $.each(d && d.emitters || [], function (_, em) { em.useArmyColor = 1; });
+                archivos[EQUIPO + r] = JSON.stringify(d);
+            }, function () { fallidos.push(r + ' (color de equipo)'); return $.Deferred().resolve().promise(); });
+        }));
+    }
+
     // ---------- montar ----------
     // Devuelve una promesa con {ok, archivos, fallidos}.
     WFX.montar = function () {
         var t0 = Date.now();
         return WFX.catalogo().then(function (cat) {
-            var a = WFX.ajustes(), cache = {}, archivos = {}, fallidos = [], trabajos = [];
+            var a = WFX.ajustes(), cache = {}, archivos = {}, fallidos = [], trabajos = [], pfx = {};
             $.each(cat.fichas, function (ruta, cambios) {
-                trabajos.push(armar(ruta, cambios, cat, a, cache).then(
+                trabajos.push(armar(ruta, cambios, cat, a, cache, pfx).then(
                     function (texto) { archivos[ruta] = texto; },
                     function () { fallidos.push(ruta); return $.Deferred().resolve().promise(); }));
             });
             return $.when.apply($, trabajos).then(function () {
+                return equipo(pfx, archivos, fallidos);
+            }).then(function () {
                 archivos[MARCA] = JSON.stringify({ firma: firma(cat, a), escena: escena, hora: new Date().toString() });
                 var listo = $.Deferred();
                 api.file.mountMemoryFiles(archivos).always(function () { listo.resolve(); });
                 return listo.then(function () {
                     var n = Object.keys(archivos).length - 1;
                     if (fallidos.length) { error(fallidos.length + ' archivo(s) no se pudieron armar (quedan como el juego): ' + fallidos.join(', ')); }
-                    log('montado nivel "' + a.base + '" en ' + n + ' archivo(s) en ' + (Date.now() - t0) + ' ms');
+                    log('montado nivel "' + a.base + '"' + (a.equipo ? ' con color de equipo' : '') + ' en ' + n + ' archivo(s) en ' + (Date.now() - t0) + ' ms');
                     return { ok: true, archivos: n, fallidos: fallidos };
                 });
             });

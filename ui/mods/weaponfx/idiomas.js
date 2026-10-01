@@ -5,6 +5,7 @@
     'use strict';
     var WFX = window.WeaponFX = window.WeaponFX || {};
     var K = [
+        "Skin", "No skin", "(Global skin)", "(Base skin)", "(Family skin)", "(Unit skin)",
         "Weapon FX", "Weapon effects", "Effects level", "Low", "Original", "High", "Uber", "Custom",
         "Low: lighter than the original game, for slower computers. Original: the game effects, unchanged. High: stronger, richer effects. Uber: the strongest.",
         "Changes apply when you press Save. During a match the screen goes black for a moment while the effects reload.",
@@ -21,6 +22,7 @@
     ];
     var IDIOMAS = {
         'fr': [
+            "Apparence", "Sans apparence", "(Apparence globale)", "(Apparence de base)", "(Apparence de la famille)", "(Apparence de l’unité)",
             "Weapon FX", "Effets d'armes", "Niveau des effets", "Bas", "Original", "Élevé", "Uber", "Personnalisé",
             "Bas : plus légers que le jeu d'origine, pour les ordinateurs lents. Original : les effets du jeu, sans changement. Élevé : des effets plus forts et plus riches. Uber : les plus forts.",
             "Les changements s'appliquent quand vous appuyez sur Enregistrer. En pleine partie, l'écran devient noir un instant pendant le rechargement des effets.",
@@ -36,6 +38,7 @@
             "Code importé. Appuyez sur Enregistrer pour l'appliquer.", "Réglages ignorés (inconnus ici) :", "Personnalisé réinitialisé. Appuyez sur Enregistrer pour l'appliquer."
         ],
         'de': [
+            "Skin", "Kein Skin", "(Globaler Skin)", "(Basis-Skin)", "(Skin der Familie)", "(Skin der Einheit)",
             "Weapon FX", "Waffeneffekte", "Effektstufe", "Niedrig", "Original", "Hoch", "Uber", "Benutzerdefiniert",
             "Niedrig: leichter als im Originalspiel, für langsamere Computer. Original: die Effekte des Spiels, unverändert. Hoch: stärkere, reichere Effekte. Uber: die stärksten.",
             "Änderungen werden übernommen, wenn du auf Speichern drückst. Während eines Spiels wird der Bildschirm kurz schwarz, während die Effekte neu geladen werden.",
@@ -51,6 +54,7 @@
             "Code importiert. Drücke Speichern, um ihn anzuwenden.", "Ignorierte Einstellungen (hier unbekannt):", "Benutzerdefiniert zurückgesetzt. Drücke Speichern, um es anzuwenden."
         ],
         'ru': [
+            "Облик", "Без облика", "(Общий облик)", "(Базовый облик)", "(Облик семейства)", "(Облик юнита)",
             "Weapon FX", "Эффекты оружия", "Уровень эффектов", "Низкий", "Оригинал", "Высокий", "Uber", "Свой",
             "Низкий: легче, чем в оригинальной игре, для слабых компьютеров. Оригинал: эффекты игры без изменений. Высокий: более мощные и насыщенные эффекты. Uber: самые мощные.",
             "Изменения применяются после нажатия «Сохранить». Во время матча экран на мгновение станет чёрным, пока эффекты перезагружаются.",
@@ -66,6 +70,7 @@
             "Код импортирован. Нажмите «Сохранить», чтобы применить.", "Пропущенные настройки (здесь неизвестны):", "Свои настройки сброшены. Нажмите «Сохранить», чтобы применить."
         ],
         'zh': [
+            "皮肤", "无皮肤", "（全局皮肤）", "（基础皮肤）", "（武器类别皮肤）", "（单位皮肤）",
             "Weapon FX", "武器特效", "特效等级", "低", "原版", "高", "Uber", "自定义",
             "低：比原版更轻量，适合较慢的电脑。原版：游戏自带特效，不做改动。高：更强、更丰富的特效。Uber：最强。",
             "按下保存后生效。对局中重新加载特效时，屏幕会短暂变黑。",
@@ -81,6 +86,7 @@
             "代码已导入。按保存以应用。", "已忽略的设置（此处不存在）：", "自定义已重置。按保存以应用。"
         ],
         'ja': [
+            "スキン", "スキンなし", "（全体のスキン）", "（基本スキン）", "（ファミリーのスキン）", "（ユニットのスキン）",
             "Weapon FX", "武器エフェクト", "エフェクトレベル", "低", "オリジナル", "高", "Uber", "カスタム",
             "低：元のゲームより軽く、低スペックPC向け。オリジナル：ゲームのエフェクトそのまま。高：より強く豊かなエフェクト。Uber：最も強い。",
             "変更は「保存」を押すと適用されます。試合中はエフェクトの再読み込みのため、画面が一瞬暗くなります。",
@@ -96,6 +102,7 @@
             "コードをインポートしました。「保存」を押すと適用されます。", "無視された設定（ここには存在しません）：", "カスタムをリセットしました。「保存」を押すと適用されます。"
         ],
         'ko': [
+            "스킨", "스킨 없음", "(전체 스킨)", "(기본 스킨)", "(무기 계열 스킨)", "(유닛 스킨)",
             "Weapon FX", "무기 효과", "효과 수준", "낮음", "원본", "높음", "Uber", "사용자 지정",
             "낮음: 원래 게임보다 가벼워 느린 컴퓨터에 적합합니다. 원본: 게임 효과 그대로입니다. 높음: 더 강하고 풍부한 효과. Uber: 가장 강함.",
             "저장을 누르면 변경 사항이 적용됩니다. 경기 중에는 효과를 다시 불러오는 동안 화면이 잠시 검게 변합니다.",
@@ -111,6 +118,7 @@
             "코드를 가져왔습니다. 저장을 눌러 적용하세요.", "무시된 설정(여기에는 없음):", "사용자 지정을 초기화했습니다. 저장을 눌러 적용하세요."
         ],
         'it': [
+            "Skin", "Nessuna skin", "(Skin globale)", "(Skin di base)", "(Skin della famiglia)", "(Skin dell’unità)",
             "Weapon FX", "Effetti delle armi", "Livello degli effetti", "Basso", "Originale", "Alto", "Uber", "Personalizzato",
             "Basso: più leggeri del gioco originale, per computer lenti. Originale: gli effetti del gioco, invariati. Alto: effetti più forti e ricchi. Uber: i più forti.",
             "Le modifiche si applicano quando premi Salva. Durante una partita lo schermo diventa nero per un attimo mentre gli effetti si ricaricano.",
@@ -126,6 +134,7 @@
             "Codice importato. Premi Salva per applicarlo.", "Impostazioni ignorate (qui non esistono):", "Personalizzato ripristinato. Premi Salva per applicarlo."
         ],
         'pl': [
+            "Skórka", "Bez skórki", "(Skórka globalna)", "(Skórka bazowa)", "(Skórka rodziny)", "(Skórka jednostki)",
             "Weapon FX", "Efekty broni", "Poziom efektów", "Niski", "Oryginalny", "Wysoki", "Uber", "Własny",
             "Niski: lżejsze niż w oryginalnej grze, dla wolniejszych komputerów. Oryginalny: efekty z gry, bez zmian. Wysoki: mocniejsze, bogatsze efekty. Uber: najmocniejsze.",
             "Zmiany zostaną zastosowane po naciśnięciu Zapisz. W trakcie meczu ekran na chwilę zrobi się czarny podczas przeładowania efektów.",
@@ -141,6 +150,7 @@
             "Kod zaimportowany. Naciśnij Zapisz, aby go zastosować.", "Pominięte ustawienia (tu nieznane):", "Własne ustawienia zresetowane. Naciśnij Zapisz, aby je zastosować."
         ],
         'pt': [
+            "Skin", "Sem skin", "(Skin global)", "(Skin base)", "(Skin da família)", "(Skin da unidade)",
             "Weapon FX", "Efeitos de armas", "Nível dos efeitos", "Baixo", "Original", "Alto", "Uber", "Personalizado",
             "Baixo: mais leves que os do jogo original, para computadores mais lentos. Original: os efeitos do jogo, sem mudanças. Alto: efeitos mais fortes e ricos. Uber: os mais fortes.",
             "As mudanças são aplicadas quando você pressiona Salvar. Durante uma partida, a tela fica preta por um instante enquanto os efeitos recarregam.",

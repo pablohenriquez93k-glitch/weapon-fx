@@ -11,6 +11,12 @@
     // Traducciones propias. La clave es el texto en ingles (loc). Pablo revisa el español; el resto de idiomas esta en idiomas.js.
     var TRAD = {
         'es': {
+            'Skin': 'Skin',
+            'No skin': 'Sin skin',
+            '(Global skin)': '(Skin global)',
+            '(Base skin)': '(Skin base)',
+            '(Family skin)': '(Skin de la familia)',
+            '(Unit skin)': '(Skin de la unidad)',
             'Weapon FX': 'Weapon FX',
             'Weapon effects': 'Efectos de armas',
             'Effects level': 'Nivel de efectos',
@@ -19,6 +25,9 @@
             'High': 'Alto',
             'Uber': 'Uber',
             'Custom': 'Personalizado',
+            'Team color': 'Color de equipo',
+            'Team color: every effect takes the color of the army that fires it, over the chosen skin and level.':
+                'Color de equipo: cada efecto toma el color del ejército que dispara, sobre la skin y el nivel elegidos.',
             'Low: lighter than the original game, for slower computers. Original: the game effects, unchanged. High: stronger, richer effects. Uber: the strongest.':
                 'Bajo: más livianos que los del juego, para computadores lentos. Original: los efectos del juego, sin cambios. Alto: efectos más fuertes y ricos. Uber: los más fuertes.',
             'Changes apply when you press Save. During a match the screen goes black for a moment while the effects reload.':
@@ -94,11 +103,23 @@
                 title: L('Effects level'), type: 'select', default: 'alto',
                 options: WFX.NIVELES_MENU,
                 optionsText: [L('Low'), L('Original'), L('High'), L('Uber'), L('Custom')]
+            },
+            skin: {
+                title: L('Skin'), type: 'select', default: 'ninguna',
+                // listas escritas por generar_mod.py desde skins/*.json: no editar a mano
+                options: ["ninguna", "criogenico", "holo", "infierno", "plasma", "robotico", "toxico", "vacio"], // SKINS
+                optionsText: [L('No skin'), "Criogénico", "Holo", "Infierno", "Plasma", "Robótico", "Tóxico", "Vacío"] // SKINS
+            },
+            // Color de equipo: montaje.js pone useArmyColor en cada emisor al montar (sin archivos extra en el mod)
+            team_color: {
+                title: L('Team color'), type: 'select', default: 'OFF',
+                options: ['OFF', 'ON'], optionsText: ['!LOC:OFF', '!LOC:ON']   // como las opciones ON/OFF del juego
             }
         }
     };
     WFX.NOTAS = [
         'Low: lighter than the original game, for slower computers. Original: the game effects, unchanged. High: stronger, richer effects. Uber: the strongest.',
+        'Team color: every effect takes the color of the army that fires it, over the chosen skin and level.',
         'Changes apply when you press Save. During a match the screen goes black for a moment while the effects reload.'
     ];
 

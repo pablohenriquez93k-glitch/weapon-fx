@@ -45,9 +45,14 @@ Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
 - UI languages: English, Spanish, French, German, Russian, Chinese (simplified), Japanese, Korean, Italian,
   Polish and Portuguese. Other languages show English.
 
+## License
+MIT (see `LICENSE`) for our own work: code, scripts and our own textures. Effects and textures that come from
+Planetary Annihilation: Titans belong to their owners and are not covered by this license.
+
 ## Credits
 - **NikolaMX** — Effects and Stuff (Nik version) is the reference: its per-effect size set the ceiling for this
   mod. Thanks, NikolaMX! No files from it are included; the techniques were rebuilt from the vanilla effects.
+  NikolaMX also tested the previews and gave the feedback that shaped the lighting and particle limits.
 - Pablo & Claude.
 
 ## Feedback we'd love

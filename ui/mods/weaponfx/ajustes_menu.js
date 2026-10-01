@@ -8,6 +8,8 @@
         var WFX = window.WeaponFX, G = WFX.GRUPO;
         model.settingDefinitions(api.settings.definitions);   // las computadas ya se evaluaron: forzar recalculo
         var item = '$root.settingsItemMap()[\'' + G + '.level\']';
+        var itemSkin = '$root.settingsItemMap()[\'' + G + '.skin\']';
+        var itemEquipo = '$root.settingsItemMap()[\'' + G + '.team_color\']';
         var L = function (s) { return 'loc(\'!LOC:' + s + '\')'; };
         var NOTA = 'style="opacity:0.7; margin:0 0 10px;"';
         var texto = function (s, estilo, visible) {
@@ -16,7 +18,9 @@
         var html =
             texto('Weapon effects', 'class="sub-group-title"') +
             '<div class="sub-group top" style="flex-wrap:wrap; min-height:0;">' +
-            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + item + ' }"></div></div>' +
+            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + item + ' }"></div>' +
+            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemSkin + ' }"></div>' +
+            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemEquipo + ' }"></div></div>' +
             WFX.NOTAS.map(function (n) { return texto(n, NOTA); }).join('') +
             '<div id="wfx_editor" data-bind="visible: ' + item + '.value() === \'personalizado\'"></div>';
         $('head').append('<style>' +
