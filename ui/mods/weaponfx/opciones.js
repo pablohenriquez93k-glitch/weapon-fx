@@ -26,6 +26,13 @@
             'Uber': 'Uber',
             'Custom': 'Personalizado',
             'Team color': 'Color de equipo',
+            'Cryogenic': 'Criogénico',
+            'Toxic': 'Tóxico',
+            'Inferno': 'Infierno',
+            'Void': 'Vacío',
+            'Holo': 'Holo',
+            'Plasma': 'Plasma',
+            'Robotic': 'Robótico',
             'Team color: every effect takes the color of the army that fires it, over the chosen skin and level.':
                 'Color de equipo: cada efecto toma el color del ejército que dispara, sobre la skin y el nivel elegidos.',
             'Low: lighter than the original game, for slower computers. Original: the game effects, unchanged. High: stronger, richer effects. Uber: the strongest.':
@@ -108,7 +115,7 @@
                 title: L('Skin'), type: 'select', default: 'ninguna',
                 // listas escritas por generar_mod.py desde skins/*.json: no editar a mano
                 options: ["ninguna", "criogenico", "holo", "infierno", "plasma", "robotico", "toxico", "vacio"], // SKINS
-                optionsText: [L('No skin'), "Criogénico", "Holo", "Infierno", "Plasma", "Robótico", "Tóxico", "Vacío"] // SKINS
+                optionsText: [L('No skin'), L("Cryogenic"), L("Holo"), L("Inferno"), L("Plasma"), L("Robotic"), L("Toxic"), L("Void")] // SKINS
             },
             // Color de equipo: montaje.js pone useArmyColor en cada emisor al montar (sin archivos extra en el mod)
             team_color: {

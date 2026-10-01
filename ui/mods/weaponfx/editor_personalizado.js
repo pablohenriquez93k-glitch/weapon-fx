@@ -50,7 +50,7 @@
         var s = $('<select class="wfx-sel"></select>').attr('aria-label', t('Skin')).attr('title', t('Skin'));
         s.append($('<option value=""></option>').text(t(primera)));
         $.each(['ninguna'].concat(Object.keys(cat.skins || {})), function (_, id) {
-            s.append($('<option></option>').attr('value', id).text(id === 'ninguna' ? t('No skin') : cat.skins[id]));
+            s.append($('<option></option>').attr('value', id).text(id === 'ninguna' ? t('No skin') : t(cat.skins[id])));
         });
         s.val(mapa[k] || '');
         s.on('change', function () {
