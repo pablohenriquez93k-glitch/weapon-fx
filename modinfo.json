@@ -4,9 +4,9 @@
   "display_name": "Weapon FX",
   "description": "Stronger, richer weapon effects (muzzle flashes, trails, impacts) built from the vanilla ones. Cosmetic only, no gameplay changes. Designed to sit below gameplay-readability effect mods (lower priority).",
   "author": "Pablo & Claude",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "build": "124680",
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "signature": " ",
   "forum": "https://github.com/pablohenriquez93k-glitch/weapon-fx",
   "priority": 154,
@@ -33,5 +33,6 @@
       "coui://ui/mods/com.pa.pabloandclaude.weaponfx/opciones.js",
       "coui://ui/mods/com.pa.pabloandclaude.weaponfx/montaje.js"
     ]
-  }
+  },
+  "titansOnly": true
 }

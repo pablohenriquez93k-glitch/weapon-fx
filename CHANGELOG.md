@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 (2026-10-01)
+- Fixed 24 texture files that were committed with mixed-case names while every effect references them in lowercase
+  (could fail on Linux/macOS and on zip mounts). All paths are lowercase now.
+- `titansOnly`: the mod needs TITANS files, so it no longer enables in Classic.
+- A failed memory mount is now reported as a failure, so it can no longer trigger a scene reload.
+- README: install path is `client_mods\`.
+
 ## 1.0.0 (2026-09-30)
 - **Skins**: Cryogenic, Toxic, Inferno, Void and Holo join Plasma and Robotic. Pick one in Settings → Weapon FX, or by
   family, unit or effect in Custom.

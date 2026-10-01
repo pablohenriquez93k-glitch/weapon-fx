@@ -151,8 +151,12 @@
             }).then(function () {
                 archivos[MARCA] = JSON.stringify({ firma: firma(cat, a), escena: escena, hora: new Date().toString() });
                 var listo = $.Deferred();
-                api.file.mountMemoryFiles(archivos).always(function () { listo.resolve(); });
-                return listo.then(function () {
+                api.file.mountMemoryFiles(archivos).then(function () { listo.resolve(true); }, function () { listo.resolve(false); });
+                return listo.then(function (montado) {
+                    if (!montado) {
+                        error('no pude montar los archivos en memoria: quedan los efectos del juego');
+                        return { ok: false };
+                    }
                     var n = Object.keys(archivos).length - 1;
                     if (fallidos.length) { error(fallidos.length + ' archivo(s) no se pudieron armar (quedan como el juego): ' + fallidos.join(', ')); }
                     log('montado nivel "' + a.base + '"' + (a.equipo ? ' con color de equipo' : '') + ' en ' + n + ' archivo(s) en ' + (Date.now() - t0) + ' ms');
