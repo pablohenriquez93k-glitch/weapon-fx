@@ -37,7 +37,7 @@ moment, same as F5).
 Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
 
 1. Unzip into `%LOCALAPPDATA%\Uber Entertainment\Planetary Annihilation\mods\`.
-2. Enable **Weapon FX (preview)** in Community Mods.
+2. Enable **Weapon FX** in Community Mods.
 3. **Turn off other effect mods while testing** (Effects and Stuff, Laser Unit Effects, Air Team Colored Trails…),
    so you see only this mod's effects.
 
