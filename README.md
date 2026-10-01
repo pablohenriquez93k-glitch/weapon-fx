@@ -5,7 +5,7 @@ It makes muzzle flashes, trails and impacts stronger and richer. **No gameplay c
 files (.pfx) and a small UI script. Unit and ammo files are never shipped. They are read from the game you have
 installed, and only their effect keys are changed, in memory.
 
-## Levels (Settings → Weapon FX)
+## Settings (Settings → Weapon FX)
 - **Low**: lighter than the original game, for slower computers.
 - **Original**: the game's effects, unchanged.
 - **High** (default): stronger, richer effects.
@@ -14,6 +14,10 @@ installed, and only their effect keys are changed, in memory.
   effect. Units are browsed by type (land, structures, air, naval, orbital, commanders). Effects that several units
   share are shown on both sides (e.g. the Manhattan shows the Dox bullet it fires). **Export** gives a text code to
   share your setup; **Import** loads one.
+- **Skin**: a visual theme over the chosen level: Cryogenic, Toxic, Inferno, Void, Holo, Plasma or Robotic. In Custom
+  you can also pick a skin by family, unit or effect.
+- **Team color**: every effect takes the color of the army that fires it, over the skin and level. Effects lose
+  some of their glow with it.
 
 Changes apply when you press **Save**; **Cancel** changes nothing. No restart needed. Starting a match with a new
 level has no black screen. Changing it in the middle of a match reloads the view (the screen goes black for a
@@ -38,7 +42,8 @@ Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
    so you see only this mod's effects.
 
 ## Known limits
-- Tested in game: Dox, Ant, Gil-E, Tesla, Boom, Bumblebee, Leveler, Ares, Atlas. Air, naval, orbital, nukes,
+- Tested in game: Dox, Ant, Gil-E, Tesla, Boom, Bumblebee, Leveler, Ares, Atlas, Pelter, Holkins, Anchor, Flak,
+  Galata and the bomber; every skin on the Dox. Air, naval, orbital, nukes,
   mines and torpedoes are checked by numbers only (size, light, reach against the damage radius), not in game.
 - Nukes and mines use `sim_*_effect`; those may be read by the server, so they might show vanilla effects.
 - Galactic War: not applied yet (it uses its own unit specs). You get the vanilla effects there.
