@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2 (2026-10-02)
+- Mod icon (300x300, hosted in this repository).
+
 ## 1.0.1 (2026-10-01)
 - Fixed 24 texture files that were committed with mixed-case names while every effect references them in lowercase
   (could fail on Linux/macOS and on zip mounts). All paths are lowercase now.
