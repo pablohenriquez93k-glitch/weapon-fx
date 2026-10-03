@@ -572,10 +572,11 @@
         WFX.catalogo();   // listo de antemano: el montaje de GW no espera el catalogo
         log('enganche de Galactic War listo');
     } else {
-        // Batalla de GW (connect_to_game ?mode=gw, o ya con tag): las fichas sin tag no se usan, y si quedan con WFX en la
-        // memoria, gw_lobby las lee al regenerar las fichas con tag y GW recibe valores de WFX como si fueran los suyos.
-        var tagAhora = $.Deferred();
-        if (/[?&]mode=gw(&|$)/.test((window.location && location.search) || '')) { tagAhora.resolve('?mode=gw'); }
+        // Batalla de GW (connect_to_game ?mode=gw, o ya con tag) o sesion co-op que abre el anfitrion (?mode=gw_campaign,
+        // vuelve a gw_play): las fichas sin tag no se usan, y si quedan con WFX en la memoria, gw_lobby las lee al
+        // regenerar las fichas con tag y GW recibe valores de WFX como si fueran los suyos.
+        var tagAhora = $.Deferred(), modoGW = /[?&]mode=(gw|gw_campaign)(&|$)/.exec((window.location && location.search) || '');
+        if (modoGW) { tagAhora.resolve('?mode=' + modoGW[1]); }
         try { api.game.getUnitSpecTag().then(function (t) { tagAhora.resolve(t || ''); }, function () { tagAhora.resolve(''); }); }
         catch (e) { tagAhora.resolve(''); }
         tagAhora.then(function (tag) {

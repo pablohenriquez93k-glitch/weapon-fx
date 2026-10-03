@@ -1,6 +1,6 @@
 # Weapon FX
 
-Client-side cosmetic mod for **Planetary Annihilation: TITANS** (build 124680).
+Client-side cosmetic mod for **Planetary Annihilation: TITANS** (build 124683).
 It makes muzzle flashes, trails and impacts stronger and richer. **No gameplay changes**: the mod ships only effect
 files (.pfx) and a small UI script. Unit and ammo files are never shipped. They are read from the game you have
 installed, and only their effect keys are changed, in memory.
@@ -45,11 +45,12 @@ Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
 
 ## Known limits
 - Tested in game: Dox, Ant, Gil-E, Tesla, Boom, Bumblebee, Leveler, Ares, Atlas, Pelter, Holkins, Anchor, Flak,
-  Galata and the bomber; every skin on the Dox. Air, naval, orbital, nukes,
-  mines and torpedoes are checked by numbers only (size, light, reach against the damage radius), not in game.
-- Nukes and mines use `sim_*_effect`; those may be read by the server, so they might show vanilla effects.
-- Galactic War: tested in game, vanilla and GW AI Overhaul 7.5.0, single player and co-op (two players, per-player
-  tech). Each player sees the effects with their own Weapon FX settings.
+  Galata, Sheller, the bomber, the laser defense towers and the land mine; every skin on the Dox. Air, naval, orbital,
+  nukes and torpedoes are checked by numbers only (size, light, reach against the damage radius), not in game.
+- The land mine's explosion shows its Weapon FX effect (tested in game). Nukes explode the same way (an explosion
+  entity that Weapon FX changes), but that is not tested in game yet.
+- Galactic War: tested in game, vanilla and GW AI Overhaul 7.5.0 and 7.6.0, single player and co-op (two players,
+  per-player tech). Each player sees the effects with their own Weapon FX settings.
 - UI languages: English, Spanish, French, German, Russian, Chinese (simplified), Japanese, Korean, Italian,
   Polish and Portuguese. Other languages show English.
 

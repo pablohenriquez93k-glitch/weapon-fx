@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.3.3 (2026-10-03)
+- **More Pew Pew skin**: the effects Weapon FX gained in 1.3.1 (the Sheller muzzle flash and the laser impacts of the
+  Commanders, the three Laser Defense Towers and the Avenger) showed the game's effect with this skin. They now use
+  More Pew Pew's style, from dom's own effect for the same unit.
+- Custom: removed the "Mine explosion" entry. The game never uses that effect (the land mine has its own explosion,
+  which keeps its Weapon FX effect), so the entry changed nothing. Saved setups and codes still load.
+- Opening a Galactic War co-op session no longer mounts the normal-match effects first: that step was unused there,
+  and Galactic War then had to clean them out of its unit files.
+- Galactic War co-op tested in game with GW AI Overhaul 7.6.0 (two players, per-player tech, each with their own skin,
+  and a skin change mid-battle).
+- README: the land mine is tested in game and shows its Weapon FX explosion; nukes work the same way but are not
+  tested in game yet.
+
 ## 1.3.2 (2026-10-03)
 - **More Pew Pew skin**: switching from it to another skin in the middle of a match left its muzzle flash sizes and
   trail positions (battleship, hover ship, sniper impact, trails) until the next match. In Galactic War they could
