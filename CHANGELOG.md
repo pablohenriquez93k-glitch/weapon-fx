@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.2 (2026-10-03)
+- **More Pew Pew skin**: switching from it to another skin in the middle of a match left its muzzle flash sizes and
+  trail positions (battleship, hover ship, sniper impact, trails) until the next match. In Galactic War they could
+  also stay without the skin, for example for a co-op guest. They now go back to the game's values whenever the
+  skin is not used.
+
 ## 1.3.1 (2026-10-03)
 - **Sheller muzzle flash**: the Sheller lost its muzzle flash. Its unit file only names a sound for firing; the flash
   comes from the base vehicle it inherits from, and Weapon FX read only one level of that inheritance. It now reads

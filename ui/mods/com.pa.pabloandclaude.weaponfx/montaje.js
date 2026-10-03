@@ -169,7 +169,8 @@
     function armar(ruta, cambios, cat, a, cache, pfx) {
         return deCache(ruta, cache).then(function (orig) {
             return fusion(ruta, cache).then(seguro(function (fus) {
-                var d = copia(orig);
+                // en plena partida coui ya sirve la ficha montada antes: sus claves de skin vuelven al juego primero
+                var d = sinClaves(copia(orig), ruta, cat);
                 $.each(cambios, function (_, c) { poner(d, fus, c.ruta, valorWFX(c, cat, a, pfx)); });
                 ponerClaves(d, fus, ruta, cat, a);
                 return JSON.stringify(d);
@@ -372,13 +373,26 @@
     // Copia de la ficha sin rutas de Weapon FX: lo que montaria el juego. GW puede traer fichas ya con WFX (gw_lobby las
     // regenera leyendo por coui las fichas sin tag, y en la memoria pueden estar las de WFX de una partida anterior):
     // cada clave que sigue la plantilla vuelve a su pfx del juego (o se borra si el juego no trae ninguno).
-    function sinWFX(orig, cambios, cat) {
+    function sinWFX(orig, cambios, cat, base) {
         var d = copia(orig);
         $.each(cambios, function (_, c) {
             var v = valorEn(d, c.ruta), padre = valorEn(d, c.ruta.slice(0, -1)), k = c.ruta[c.ruta.length - 1];
             if (typeof v !== 'string' || !$.grep(norm(v).split(' '), function (t) { return esWFX(t, cat); }).length || !comoJuego(v, c, cat)) { return; }
             var van = norm(c.plantilla.replace(/\{(\d+)\}/g, function (_, i) { return (c.efectos[+i] || {}).van || ''; }));
             if (van) { padre[k] = van; } else { delete padre[k]; }
+        });
+        return sinClaves(d, base, cat);
+    }
+    // Claves de skin (More Pew Pew: effect_scale, fx_trail.offset) que traen el valor de la skin -> el del juego (van; vf en
+    // una ficha aplanada sin base_spec; sin valor = se borra). ponerClaves las vuelve a poner si la skin las usa. Cambia d.
+    function sinClaves(d, base, cat) {
+        var plana = !d.hasOwnProperty('base_spec');
+        $.each(cat.claves || {}, function (_, fichas) {
+            $.each(fichas[base] || [], function (_, c) {
+                var padre = valorEn(d, c.ruta.slice(0, -1)), k = c.ruta[c.ruta.length - 1], n = plana ? 'vf' : 'van';
+                if (!padre || typeof padre !== 'object' || JSON.stringify(padre[k]) !== JSON.stringify(c.v)) { return; }
+                if (c.hasOwnProperty(n)) { padre[k] = copia(c[n]); } else { delete padre[k]; }
+            });
         });
         return d;
     }
@@ -397,7 +411,7 @@
                     // con cartas ON tambien la ficha sin tag (la del juego, por coui) para ver claves de efecto que agrego una carta
                     var juego = a.cartas ? fusion(m[1], suelto) : $.Deferred().resolve(null).promise();
                     return $.when(fusion(ruta, cache), juego).then(seguro(function (fus, fusJuego) {
-                        var d = copia(orig), o = {}, aplicados = {}, propias = {}, limpio = sinWFX(orig, cambios, cat);
+                        var d = sinClaves(copia(orig), m[1], cat), o = {}, aplicados = {}, propias = {}, limpio = sinWFX(orig, cambios, cat, m[1]);
                         $.each(cambios, function (_, c) { propias[c.ruta.join('.')] = true; });
                         $.each(cambios, function (_, c) {
                             var v = valorEn(fus, c.ruta), nuevo = null;
