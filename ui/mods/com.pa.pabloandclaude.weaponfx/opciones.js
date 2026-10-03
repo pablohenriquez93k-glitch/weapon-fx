@@ -35,6 +35,9 @@
             'Robotic': 'Robótico',
             'Team color: every effect takes the color of the army that fires it, over the chosen skin and level.':
                 'Color de equipo: cada efecto toma el color del ejército que dispara, sobre la skin y el nivel elegidos.',
+            'Replace GWO card effects': 'Reemplazar efectos de cartas de GWO',
+            'Replace GWO card effects: some Galactic War tech cards (GW AI Overhaul) change a weapon effect. Off: the card effect stays. On: its Weapon FX version is used.':
+                'Reemplazar efectos de cartas de GWO: algunas cartas de tecnología de Guerra Galáctica (GW AI Overhaul) cambian un efecto de arma. Desactivado: queda el efecto de la carta. Activado: se usa su versión Weapon FX.',
             'Low: lighter than the original game, for slower computers. Original: the game effects, unchanged. High: stronger, richer effects. Uber: the strongest.':
                 'Bajo: más livianos que los del juego, para computadores lentos. Original: los efectos del juego, sin cambios. Alto: efectos más fuertes y ricos. Uber: los más fuertes.',
             'Changes apply when you press Save. During a match the screen goes black for a moment while the effects reload.':
@@ -121,12 +124,18 @@
             team_color: {
                 title: L('Team color'), type: 'select', default: 'OFF',
                 options: ['OFF', 'ON'], optionsText: ['!LOC:OFF', '!LOC:ON']   // como las opciones ON/OFF del juego
+            },
+            // Galactic War: OFF = gana el pfx que puso una carta de GWO; ON = version Weapon FX de ese pfx (montaje.js, parchearGW)
+            gw_cards: {
+                title: L('Replace GWO card effects'), type: 'select', default: 'OFF',
+                options: ['OFF', 'ON'], optionsText: ['!LOC:OFF', '!LOC:ON']
             }
         }
     };
     WFX.NOTAS = [
         'Low: lighter than the original game, for slower computers. Original: the game effects, unchanged. High: stronger, richer effects. Uber: the strongest.',
         'Team color: every effect takes the color of the army that fires it, over the chosen skin and level.',
+        'Replace GWO card effects: some Galactic War tech cards (GW AI Overhaul) change a weapon effect. Off: the card effect stays. On: its Weapon FX version is used.',
         'Changes apply when you press Save. During a match the screen goes black for a moment while the effects reload.'
     ];
 

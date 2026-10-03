@@ -1,6 +1,13 @@
 # Changelog
 
-## 1.1.0 (unreleased)
+## 1.3.0 (2026-10-03)
+- **Galactic War**: Weapon FX now works in Galactic War, vanilla and GW AI Overhaul (GWO). The effects go into the war's
+  own unit files (yours and the AI's), and changing a setting mid-battle reloads the view, same as in a normal match.
+- **Replace GWO card effects** (new setting, default Off): some GWO tech cards change a weapon effect (Dox, Kestrel,
+  Ant, Gil-E and others). Off: the card's effect stays. On: the Weapon FX version of that effect is used, with your
+  level and skin. A card effect with no Weapon FX version (the Gil-E beam) stays as the card made it.
+
+## 1.1.0 (2026-10-03)
 - **More Pew Pew skin**: the weapon effects of More Pew Pew by dom314 (MIT), with the Low/Original/High/Uber levels.
   Original is dom's effects as he made them; effects he never covered (nukes, orbital units, Titans and others) are made
   in his style (his colors by ammo type, his effects as templates).

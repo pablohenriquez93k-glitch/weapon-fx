@@ -10,6 +10,7 @@
         var item = '$root.settingsItemMap()[\'' + G + '.level\']';
         var itemSkin = '$root.settingsItemMap()[\'' + G + '.skin\']';
         var itemEquipo = '$root.settingsItemMap()[\'' + G + '.team_color\']';
+        var itemCartas = '$root.settingsItemMap()[\'' + G + '.gw_cards\']';
         var L = function (s) { return 'loc(\'!LOC:' + s + '\')'; };
         var NOTA = 'style="opacity:0.7; margin:0 0 10px;"';
         var texto = function (s, estilo, visible) {
@@ -22,7 +23,8 @@
             // en Personalizado la skin se elige en el editor: la global se oculta para no pisar lo personalizado
             '<div class="option" data-bind="visible: ' + item + '.value() !== \'personalizado\', template: { name: \'setting-template\', data: ' + itemSkin + ' }"></div>' +
             '<div class="option" data-bind="visible: ' + item + '.value() === \'personalizado\', text: loc(\'!LOC:Skin\') + \': \' + loc(\'!LOC:Custom\')"></div>' +
-            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemEquipo + ' }"></div></div>' +
+            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemEquipo + ' }"></div>' +
+            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemCartas + ' }"></div></div>' +
             WFX.NOTAS.map(function (n) { return texto(n, NOTA); }).join('') +
             '<div id="wfx_editor" data-bind="visible: ' + item + '.value() === \'personalizado\'"></div>';
         $('head').append('<style>' +

@@ -19,7 +19,8 @@
         "Ground blast when firing", "Export", "Import", "Reset custom", "Paste a code here and press Import",
         "Code ready: select it and copy it with Ctrl+C.", "That code is not valid. Nothing was changed.",
         "Code imported. Press Save to apply it.", "Settings ignored (unknown here):", "Custom reset. Press Save to apply it.",
-        "Team color", "Team color: every effect takes the color of the army that fires it, over the chosen skin and level.", "Cryogenic", "Toxic", "Inferno", "Void", "Holo", "Plasma", "Robotic"
+        "Team color", "Team color: every effect takes the color of the army that fires it, over the chosen skin and level.", "Cryogenic", "Toxic", "Inferno", "Void", "Holo", "Plasma", "Robotic",
+        "Replace GWO card effects", "Replace GWO card effects: some Galactic War tech cards (GW AI Overhaul) change a weapon effect. Off: the card effect stays. On: its Weapon FX version is used."
     ];
     var IDIOMAS = {
         'fr': [
@@ -37,7 +38,8 @@
             "Souffle au sol au tir", "Exporter", "Importer", "Réinitialiser le personnalisé", "Collez un code ici et appuyez sur Importer",
             "Code prêt : sélectionnez-le et copiez-le avec Ctrl+C.", "Ce code n'est pas valide. Rien n'a été modifié.",
             "Code importé. Appuyez sur Enregistrer pour l'appliquer.", "Réglages ignorés (inconnus ici) :", "Personnalisé réinitialisé. Appuyez sur Enregistrer pour l'appliquer.",
-            "Couleur d’équipe", "Couleur d’équipe : chaque effet prend la couleur de l’armée qui tire, par-dessus l’apparence et le niveau choisis.", "Cryogénique", "Toxique", "Brasier", "Néant", "Holo", "Plasma", "Robotique"
+            "Couleur d’équipe", "Couleur d’équipe : chaque effet prend la couleur de l’armée qui tire, par-dessus l’apparence et le niveau choisis.", "Cryogénique", "Toxique", "Brasier", "Néant", "Holo", "Plasma", "Robotique",
+            "Remplacer les effets des cartes GWO", "Remplacer les effets des cartes GWO : certaines cartes technologiques de la Guerre Galactique (GW AI Overhaul) changent un effet d’arme. Désactivé : l’effet de la carte reste. Activé : sa version Weapon FX est utilisée."
         ],
         'de': [
             "Skin", "Kein Skin", "(Globaler Skin)", "(Basis-Skin)", "(Skin der Familie)", "(Skin der Einheit)",
@@ -54,7 +56,8 @@
             "Bodendruckwelle beim Feuern", "Exportieren", "Importieren", "Benutzerdefiniert zurücksetzen", "Code hier einfügen und Importieren drücken",
             "Code bereit: markiere ihn und kopiere ihn mit Strg+C.", "Dieser Code ist ungültig. Nichts wurde geändert.",
             "Code importiert. Drücke Speichern, um ihn anzuwenden.", "Ignorierte Einstellungen (hier unbekannt):", "Benutzerdefiniert zurückgesetzt. Drücke Speichern, um es anzuwenden.",
-            "Teamfarbe", "Teamfarbe: Jeder Effekt übernimmt die Farbe der feuernden Armee, über dem gewählten Skin und Level.", "Kryo", "Giftig", "Inferno", "Leere", "Holo", "Plasma", "Robotisch"
+            "Teamfarbe", "Teamfarbe: Jeder Effekt übernimmt die Farbe der feuernden Armee, über dem gewählten Skin und Level.", "Kryo", "Giftig", "Inferno", "Leere", "Holo", "Plasma", "Robotisch",
+            "GWO-Karteneffekte ersetzen", "GWO-Karteneffekte ersetzen: Einige Technologiekarten im Galaktischen Krieg (GW AI Overhaul) ändern einen Waffeneffekt. Aus: Der Karteneffekt bleibt. An: Seine Weapon-FX-Version wird verwendet."
         ],
         'ru': [
             "Облик", "Без облика", "(Общий облик)", "(Базовый облик)", "(Облик семейства)", "(Облик юнита)",
@@ -71,7 +74,8 @@
             "Удар по земле при выстреле", "Экспорт", "Импорт", "Сбросить свои настройки", "Вставьте код сюда и нажмите «Импорт»",
             "Код готов: выделите его и скопируйте с помощью Ctrl+C.", "Этот код недействителен. Ничего не изменено.",
             "Код импортирован. Нажмите «Сохранить», чтобы применить.", "Пропущенные настройки (здесь неизвестны):", "Свои настройки сброшены. Нажмите «Сохранить», чтобы применить.",
-            "Цвет команды", "Цвет команды: каждый эффект получает цвет армии, которая стреляет, поверх выбранного скина и уровня.", "Криогенный", "Токсичный", "Инферно", "Бездна", "Голограмма", "Плазма", "Роботизированный"
+            "Цвет команды", "Цвет команды: каждый эффект получает цвет армии, которая стреляет, поверх выбранного скина и уровня.", "Криогенный", "Токсичный", "Инферно", "Бездна", "Голограмма", "Плазма", "Роботизированный",
+            "Заменять эффекты карт GWO", "Заменять эффекты карт GWO: некоторые карты технологий в Галактической войне (GW AI Overhaul) меняют эффект оружия. Выкл.: остаётся эффект карты. Вкл.: используется его версия Weapon FX."
         ],
         'zh': [
             "皮肤", "无皮肤", "（全局皮肤）", "（基础皮肤）", "（武器类别皮肤）", "（单位皮肤）",
@@ -88,7 +92,8 @@
             "开火时的地面冲击", "导出", "导入", "重置自定义", "在此粘贴代码并按导入",
             "代码已就绪：选中它并用 Ctrl+C 复制。", "该代码无效。未做任何更改。",
             "代码已导入。按保存以应用。", "已忽略的设置（此处不存在）：", "自定义已重置。按保存以应用。",
-            "队伍颜色", "队伍颜色：每个效果都使用开火方军队的颜色，覆盖所选皮肤和等级。", "低温", "剧毒", "地狱火", "虚空", "全息", "等离子", "机械"
+            "队伍颜色", "队伍颜色：每个效果都使用开火方军队的颜色，覆盖所选皮肤和等级。", "低温", "剧毒", "地狱火", "虚空", "全息", "等离子", "机械",
+            "替换 GWO 卡牌效果", "替换 GWO 卡牌效果：银河战争（GW AI Overhaul）中的部分科技卡会更改武器效果。关闭：保留卡牌的效果。开启：使用该效果的 Weapon FX 版本。"
         ],
         'ja': [
             "スキン", "スキンなし", "（全体のスキン）", "（基本スキン）", "（ファミリーのスキン）", "（ユニットのスキン）",
@@ -105,7 +110,8 @@
             "発射時の地面衝撃", "エクスポート", "インポート", "カスタムをリセット", "ここにコードを貼り付けて「インポート」を押してください",
             "コードの準備完了：選択して Ctrl+C でコピーしてください。", "このコードは無効です。何も変更されていません。",
             "コードをインポートしました。「保存」を押すと適用されます。", "無視された設定（ここには存在しません）：", "カスタムをリセットしました。「保存」を押すと適用されます。",
-            "チームカラー", "チームカラー：すべてのエフェクトが、選んだスキンとレベルの上から、発射した軍のカラーになります。", "極低温", "毒性", "業火", "虚無", "ホロ", "プラズマ", "ロボット"
+            "チームカラー", "チームカラー：すべてのエフェクトが、選んだスキンとレベルの上から、発射した軍のカラーになります。", "極低温", "毒性", "業火", "虚無", "ホロ", "プラズマ", "ロボット",
+            "GWO カードのエフェクトを置き換える", "GWO カードのエフェクトを置き換える：ギャラクティック・ウォー（GW AI Overhaul）の一部のテクノロジーカードは武器のエフェクトを変更します。オフ：カードのエフェクトのまま。オン：その Weapon FX 版を使います。"
         ],
         'ko': [
             "스킨", "스킨 없음", "(전체 스킨)", "(기본 스킨)", "(무기 계열 스킨)", "(유닛 스킨)",
@@ -122,7 +128,8 @@
             "발사 시 지면 충격", "내보내기", "가져오기", "사용자 지정 초기화", "여기에 코드를 붙여넣고 가져오기를 누르세요",
             "코드 준비 완료: 선택한 뒤 Ctrl+C로 복사하세요.", "유효하지 않은 코드입니다. 아무것도 바뀌지 않았습니다.",
             "코드를 가져왔습니다. 저장을 눌러 적용하세요.", "무시된 설정(여기에는 없음):", "사용자 지정을 초기화했습니다. 저장을 눌러 적용하세요.",
-            "팀 색상", "팀 색상: 모든 효과가 선택한 스킨과 레벨 위에 발사한 군대의 색상을 입습니다.", "극저온", "독성", "지옥불", "공허", "홀로", "플라즈마", "로봇"
+            "팀 색상", "팀 색상: 모든 효과가 선택한 스킨과 레벨 위에 발사한 군대의 색상을 입습니다.", "극저온", "독성", "지옥불", "공허", "홀로", "플라즈마", "로봇",
+            "GWO 카드 효과 교체", "GWO 카드 효과 교체: 은하 전쟁(GW AI Overhaul)의 일부 기술 카드는 무기 효과를 바꿉니다. 끄기: 카드 효과를 유지합니다. 켜기: 그 효과의 Weapon FX 버전을 사용합니다."
         ],
         'it': [
             "Skin", "Nessuna skin", "(Skin globale)", "(Skin di base)", "(Skin della famiglia)", "(Skin dell’unità)",
@@ -139,7 +146,8 @@
             "Onda d'urto a terra allo sparo", "Esporta", "Importa", "Ripristina personalizzato", "Incolla qui un codice e premi Importa",
             "Codice pronto: selezionalo e copialo con Ctrl+C.", "Questo codice non è valido. Non è stato cambiato nulla.",
             "Codice importato. Premi Salva per applicarlo.", "Impostazioni ignorate (qui non esistono):", "Personalizzato ripristinato. Premi Salva per applicarlo.",
-            "Colore squadra", "Colore squadra: ogni effetto prende il colore dell’esercito che spara, sopra la skin e il livello scelti.", "Criogenico", "Tossico", "Inferno", "Vuoto", "Holo", "Plasma", "Robotico"
+            "Colore squadra", "Colore squadra: ogni effetto prende il colore dell’esercito che spara, sopra la skin e il livello scelti.", "Criogenico", "Tossico", "Inferno", "Vuoto", "Holo", "Plasma", "Robotico",
+            "Sostituisci gli effetti delle carte GWO", "Sostituisci gli effetti delle carte GWO: alcune carte tecnologia della Guerra Galattica (GW AI Overhaul) cambiano un effetto d’arma. Disattivato: resta l’effetto della carta. Attivato: si usa la sua versione Weapon FX."
         ],
         'pl': [
             "Skórka", "Bez skórki", "(Skórka globalna)", "(Skórka bazowa)", "(Skórka rodziny)", "(Skórka jednostki)",
@@ -156,7 +164,8 @@
             "Podmuch przy ziemi przy strzale", "Eksportuj", "Importuj", "Resetuj własne", "Wklej tutaj kod i naciśnij Importuj",
             "Kod gotowy: zaznacz go i skopiuj za pomocą Ctrl+C.", "Ten kod jest nieprawidłowy. Nic nie zmieniono.",
             "Kod zaimportowany. Naciśnij Zapisz, aby go zastosować.", "Pominięte ustawienia (tu nieznane):", "Własne ustawienia zresetowane. Naciśnij Zapisz, aby je zastosować.",
-            "Kolor drużyny", "Kolor drużyny: każdy efekt przyjmuje kolor armii, która strzela, nad wybranym skinem i poziomem.", "Kriogeniczny", "Toksyczny", "Inferno", "Pustka", "Holo", "Plazma", "Robotyczny"
+            "Kolor drużyny", "Kolor drużyny: każdy efekt przyjmuje kolor armii, która strzela, nad wybranym skinem i poziomem.", "Kriogeniczny", "Toksyczny", "Inferno", "Pustka", "Holo", "Plazma", "Robotyczny",
+            "Zastąp efekty kart GWO", "Zastąp efekty kart GWO: niektóre karty technologii w Wojnie Galaktycznej (GW AI Overhaul) zmieniają efekt broni. Wyłączone: zostaje efekt karty. Włączone: używana jest jego wersja Weapon FX."
         ],
         'pt': [
             "Skin", "Sem skin", "(Skin global)", "(Skin base)", "(Skin da família)", "(Skin da unidade)",
@@ -173,7 +182,8 @@
             "Impacto no solo ao disparar", "Exportar", "Importar", "Redefinir personalizado", "Cole um código aqui e pressione Importar",
             "Código pronto: selecione-o e copie com Ctrl+C.", "Esse código não é válido. Nada foi alterado.",
             "Código importado. Pressione Salvar para aplicá-lo.", "Ajustes ignorados (não existem aqui):", "Personalizado redefinido. Pressione Salvar para aplicá-lo.",
-            "Cor da equipe", "Cor da equipe: cada efeito assume a cor do exército que dispara, sobre a skin e o nível escolhidos.", "Criogênico", "Tóxico", "Inferno", "Vazio", "Holo", "Plasma", "Robótico"
+            "Cor da equipe", "Cor da equipe: cada efeito assume a cor do exército que dispara, sobre a skin e o nível escolhidos.", "Criogênico", "Tóxico", "Inferno", "Vazio", "Holo", "Plasma", "Robótico",
+            "Substituir efeitos das cartas do GWO", "Substituir efeitos das cartas do GWO: algumas cartas de tecnologia da Guerra Galáctica (GW AI Overhaul) mudam um efeito de arma. Desativado: fica o efeito da carta. Ativado: usa a versão Weapon FX dele."
         ]
     };
     WFX.TRAD = WFX.TRAD || {};

@@ -18,6 +18,8 @@ installed, and only their effect keys are changed, in memory.
   you can also pick a skin by family, unit or effect.
 - **Team color**: every effect takes the color of the army that fires it, over the skin and level. Effects lose
   some of their glow with it.
+- **Replace GWO card effects** (Galactic War with GW AI Overhaul): some tech cards change a weapon effect. Off
+  (default): the card's effect stays. On: its Weapon FX version is used.
 
 Changes apply when you press **Save**; **Cancel** changes nothing. No restart needed. Starting a match with a new
 level has no black screen. Changing it in the middle of a match reloads the view (the screen goes black for a
@@ -46,7 +48,8 @@ Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
   Galata and the bomber; every skin on the Dox. Air, naval, orbital, nukes,
   mines and torpedoes are checked by numbers only (size, light, reach against the damage radius), not in game.
 - Nukes and mines use `sim_*_effect`; those may be read by the server, so they might show vanilla effects.
-- Galactic War: not applied yet (it uses its own unit specs). You get the vanilla effects there.
+- Galactic War: tested in game, vanilla and GW AI Overhaul 7.5.0, single player. Co-op Galactic War is not tested in
+  game.
 - UI languages: English, Spanish, French, German, Russian, Chinese (simplified), Japanese, Korean, Italian,
   Polish and Portuguese. Other languages show English.
 
