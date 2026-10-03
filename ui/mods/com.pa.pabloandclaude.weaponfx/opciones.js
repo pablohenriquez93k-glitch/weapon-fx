@@ -114,8 +114,8 @@
             skin: {
                 title: L('Skin'), type: 'select', default: 'ninguna',
                 // listas escritas por generar_mod.py desde skins/*.json: no editar a mano
-                options: ["ninguna", "criogenico", "holo", "infierno", "plasma", "robotico", "toxico", "vacio"], // SKINS
-                optionsText: [L('No skin'), L("Cryogenic"), L("Holo"), L("Inferno"), L("Plasma"), L("Robotic"), L("Toxic"), L("Void")] // SKINS
+                options: ["ninguna", "criogenico", "holo", "infierno", "morepewpew", "plasma", "robotico", "toxico", "vacio"], // SKINS
+                optionsText: [L('No skin'), L("Cryogenic"), L("Holo"), L("Inferno"), L("More Pew Pew (dom314)"), L("Plasma"), L("Robotic"), L("Toxic"), L("Void")] // SKINS
             },
             // Color de equipo: montaje.js pone useArmyColor en cada emisor al montar (sin archivos extra en el mod)
             team_color: {

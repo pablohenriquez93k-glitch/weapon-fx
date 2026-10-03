@@ -14,20 +14,29 @@
     // Color de equipo: copia de cada .pfx elegido con "useArmyColor": 1 en cada emisor (clave de EMISOR, como fab_spray.pfx;
     // probado en la estela 2026-09-26). Vive solo en memoria bajo esta carpeta: el mod no trae archivos extra.
     var EQUIPO = '/pa/effects/specs/wfx_equipo';
+    var EQUIPO_GRIS = '/pa/effects/specs/wfx_equipo_gris';   // con skin: colores en gris (ver equipo())
     var escena = (location.pathname.split('/').slice(-2, -1)[0]) || '?';
 
     function log(m) { console.log('[Weapon FX] ' + escena + ': ' + m); }
     function error(m) { console.error('[Weapon FX] ERROR ' + escena + ': ' + m); }
 
+    // jQuery 2.1.4 (el del juego): una excepcion dentro de .then NO rechaza la promesa, la deja colgada para siempre
+    // (y con ella todo el montaje). Por eso cada .then que puede fallar pasa por seguro(): la excepcion = rechazo.
+    function seguro(f) {
+        return function () {
+            try { return f.apply(this, arguments); } catch (e) { return $.Deferred().reject(e).promise(); }
+        };
+    }
     function leer(ruta) {
-        return $.ajax({ url: 'coui:/' + ruta, dataType: 'text', cache: false }).then(function (t) { return JSON.parse(t); });
+        return $.ajax({ url: 'coui:/' + ruta, dataType: 'text', cache: false }).then(seguro(function (t) { return JSON.parse(t); }));
     }
 
     // ---------- ajustes: {base, fam: {familia: nivel}, uni: {unidad: nivel}, uf: {'unidad|familia': nivel}, efe: {id: nivel}} ----------
     // Nivel: Settings > Weapon FX (grupo weapon_fx, clave level), guardado por el juego solo con Save.
     // "personalizado": base y excepciones en weapon_fx.custom (texto JSON de editor_personalizado.js; se guarda con Save).
     // Skin (1.0.1): mismo esquema en a.skin = {base, fam, uni, uf, efe}; 'ninguna' = efectos Weapon FX sin skin.
-    // Fuera de Personalizado: grupo weapon_fx, clave skin. Un efecto compartido (p. ej. Dox y Manhattan) tiene un solo id.
+    // Fuera de Personalizado: grupo weapon_fx, clave skin. En Personalizado la skin se elige en el editor (Settings oculta
+    // la global); si el editor no la trae (guardado antes de 1.1.0), vale la global. Un efecto compartido (p. ej. Dox y Manhattan) tiene un solo id.
     function mapa(m, base) { m = m && typeof m === 'object' ? m : {}; return { base: m.base || base, fam: m.fam || {}, uni: m.uni || {}, uf: m.uf || {}, efe: m.efe || {} }; }
     WFX.ajustes = function () {
         var nivel = NIVEL_DEFECTO, skin = SIN_SKIN;
@@ -40,8 +49,7 @@
         try { a = JSON.parse(api.settings.value('weapon_fx', 'custom') || 'null'); } catch (e) { error('personalizado ilegible: ' + e); }
         a = a && typeof a === 'object' ? a : {};
         var out = mapa(a, NIVEL_DEFECTO);
-        out.skin = mapa(a.skin, skin);
-        out.equipo = equipo;
+        out.skin = mapa(a.skin, skin);        out.equipo = equipo;
         return out;
     };
     function elegir(m, id, cat) {
@@ -73,7 +81,7 @@
     WFX.catalogo = function () {
         if (catalogo) { return $.Deferred().resolve(catalogo).promise(); }
         return $.ajax({ url: BASE + 'efectos.json', dataType: 'text', cache: false })
-            .then(function (t) { catalogo = JSON.parse(t); return catalogo; });
+            .then(seguro(function (t) { catalogo = JSON.parse(t); return catalogo; }));
     };
 
     // ---------- armar un .json ----------
@@ -93,45 +101,92 @@
         }, function () { return $.Deferred().resolve({}).promise(); });
     }
 
+    function poner(d, fus, ruta, v) {
+        var nodo = d, her = fus;
+        for (var i = 0; i < ruta.length - 1; i++) {
+            var k = ruta[i];
+            her = her && typeof her === 'object' ? her[k] : null;
+            if (!nodo[k] || typeof nodo[k] !== 'object') {
+                nodo[k] = her && typeof her === 'object' ? JSON.parse(JSON.stringify(her)) : {};
+            }
+            nodo = nodo[k];
+        }
+        nodo[ruta[ruta.length - 1]] = v;
+    }
+
     function armar(ruta, cambios, cat, a, cache, pfx) {
         return (cache[ruta] || (cache[ruta] = leer(ruta))).then(function (orig) {
-            return fusion(ruta, cache).then(function (fus) {
+            return fusion(ruta, cache).then(seguro(function (fus) {
                 var d = JSON.parse(JSON.stringify(orig));
                 $.each(cambios, function (_, c) {
                     var valores = $.map(c.efectos, function (e) {
                         var r = WFX.rutaDe(e, cat, a);
                         if (!a.equipo || !r) { return [r]; }
-                        pfx[r] = true;
-                        return [EQUIPO + r];
+                        // con skin el color es saturado (dom: rojo 6.7/0.1/0.1) y el del ejercito lo multiplica: va en gris
+                        var gris = WFX.skinDe(e.id, cat, a) !== SIN_SKIN;
+                        pfx[(gris ? EQUIPO_GRIS : EQUIPO) + r] = r;
+                        return [(gris ? EQUIPO_GRIS : EQUIPO) + r];
                     });
                     var texto = c.plantilla.replace(/\{(\d+)\}/g, function (_, i) { return valores[+i]; }).split(/\s+/).join(' ').trim();
-                    var nodo = d, her = fus;
-                    for (var i = 0; i < c.ruta.length - 1; i++) {
-                        var k = c.ruta[i];
-                        her = her && typeof her === 'object' ? her[k] : null;
-                        if (!nodo[k] || typeof nodo[k] !== 'object') {
-                            nodo[k] = her && typeof her === 'object' ? JSON.parse(JSON.stringify(her)) : {};
-                        }
-                        nodo = nodo[k];
-                    }
-                    nodo[c.ruta[c.ruta.length - 1]] = texto;
+                    poner(d, fus, c.ruta, texto);
+                });
+                // claves visuales de una skin externa (More Pew Pew: effect_scale, fx_trail.offset): solo si el efecto
+                // de al lado usa esa skin; con otra skin o sin skin queda el valor del juego
+                $.each(cat.claves || {}, function (s, fichas) {
+                    $.each(fichas[ruta] || [], function (_, c) {
+                        var ef = cat.efectos[c.id], i = cat.rutas.indexOf(s + '/' + WFX.nivelDe(c.id, cat, a));
+                        // y el efecto trae pfx de la skin en ese nivel (si no, montaje usa el vanilla: no tocar)
+                        if (WFX.skinDe(c.id, cat, a) === s && ef && i >= 0 && ef.r[i] !== null && ef.r[i] !== undefined) { poner(d, fus, c.ruta, JSON.parse(JSON.stringify(c.v))); }
+                    });
                 });
                 return JSON.stringify(d);
-            });
+            }));
         });
     }
 
     // ---------- color de equipo ----------
     // Lee cada .pfx elegido (del mod o del juego), pone useArmyColor en cada emisor y lo agrega a archivos con la ruta EQUIPO.
     // Si un .pfx no se puede leer, el efecto queda sin dibujarse: se avisa en el log.
+    // Gris = el canal mas alto en cada instante (curvas se muestrean en la union de sus tiempos): el efecto
+    // conserva su intensidad y toma el tono del ejercito. Curva de PA: numero, [[t, v], ...] o {keys: [[t, v], ...], stepped}.
+    function puntos(v) { return $.isArray(v) ? v : (v && typeof v === 'object' && $.isArray(v.keys) ? v.keys : null); }
+    function enCurva(v, t) {
+        var ps = puntos(v), escalon = !!(v && v.stepped);
+        if (!ps) { return +v; }
+        if (!ps.length) { return 0; }
+        if (t <= ps[0][0]) { return ps[0][1]; }
+        for (var i = 1; i < ps.length; i++) {
+            if (t < ps[i][0]) { var a = ps[i - 1], b = ps[i]; return escalon ? a[1] : a[1] + (b[1] - a[1]) * (t - a[0]) / ((b[0] - a[0]) || 1); }
+        }
+        return ps[ps.length - 1][1];
+    }
+    function agrisar(o) {
+        if (o.red === undefined && o.green === undefined && o.blue === undefined) { return; }
+        var cs = $.map(['red', 'green', 'blue'], function (k) { return [o[k] === undefined ? 1 : o[k]]; });   // canal ausente = 1 (defecto de PA)
+        var curvas = $.grep(cs, function (v) { return !!puntos(v); }), g;
+        if (!curvas.length) { g = Math.max(+cs[0], +cs[1], +cs[2]); }
+        else {
+            var ts = {}, escalon = true;
+            $.each(curvas, function (_, v) { escalon = escalon && !!v.stepped; $.each(puntos(v), function (_, p) { ts[p[0]] = true; }); });
+            g = $.map(Object.keys(ts).map(Number).sort(function (x, y) { return x - y; }), function (t) {
+                return [[t, Math.max(enCurva(cs[0], t), enCurva(cs[1], t), enCurva(cs[2], t))]];
+            });
+            if (escalon) { g = { keys: g, stepped: true }; }
+        }
+        o.red = o.green = o.blue = g;
+    }
     function equipo(pfx, archivos, fallidos) {
         var rutas = Object.keys(pfx);
         if (!rutas.length) { return $.Deferred().resolve().promise(); }
-        return $.when.apply($, $.map(rutas, function (r) {
-            return leer(r).then(function (d) {
-                $.each(d && d.emitters || [], function (_, em) { em.useArmyColor = 1; });
-                archivos[EQUIPO + r] = JSON.stringify(d);
-            }, function () { fallidos.push(r + ' (color de equipo)'); return $.Deferred().resolve().promise(); });
+        return $.when.apply($, $.map(rutas, function (destino) {
+            var r = pfx[destino];
+            return leer(r).then(seguro(function (d) {
+                $.each(d && d.emitters || [], function (_, em) {
+                    em.useArmyColor = 1;
+                    if (destino.indexOf(EQUIPO_GRIS) === 0) { agrisar(em); if (em.spec) { agrisar(em.spec); } }
+                });
+                archivos[destino] = JSON.stringify(d);
+            })).then(null, function () { fallidos.push(r + ' (color de equipo)'); return $.Deferred().resolve().promise(); });
         }));
     }
 
@@ -159,13 +214,13 @@
                     }
                     var n = Object.keys(archivos).length - 1;
                     if (fallidos.length) { error(fallidos.length + ' archivo(s) no se pudieron armar (quedan como el juego): ' + fallidos.join(', ')); }
-                    log('montado nivel "' + a.base + '"' + (a.equipo ? ' con color de equipo' : '') + ' en ' + n + ' archivo(s) en ' + (Date.now() - t0) + ' ms');
+                    log('montado nivel "' + a.base + '", skin "' + a.skin.base + '"' + (a.equipo ? ' con color de equipo' : '') + ' en ' + n + ' archivo(s) en ' + (Date.now() - t0) + ' ms');
                     return { ok: true, archivos: n, fallidos: fallidos };
                 });
             });
         }, function () {
             error('no pude leer el catalogo ' + BASE + 'efectos.json: quedan los efectos del juego');
-            return { ok: false };
+            return $.Deferred().resolve({ ok: false }).promise();   // en jQuery 2 un valor devuelto aqui seguiria rechazado
         });
     };
 
@@ -174,7 +229,7 @@
         return WFX.catalogo().then(function (cat) {
             var f = firma(cat, WFX.ajustes());
             return leer(MARCA).then(function (m) { return m && m.firma === f; }, function () { return $.Deferred().resolve(false).promise(); });
-        }, function () { return false; });
+        }, function () { return $.Deferred().resolve(false).promise(); });   // sin catalogo: montar() lo deja en el log
     };
 
     // Aplicar en plena partida: montar + rehacer fichas (setUnitSpecTag) + recargar la vista (lo mismo que F5).

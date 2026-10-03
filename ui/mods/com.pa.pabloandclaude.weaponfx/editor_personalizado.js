@@ -31,7 +31,10 @@
     }
     function estadoSkin(s) {
         s = s && typeof s === 'object' ? s : {};
-        return { base: s.base || '', fam: s.fam || {}, uni: s.uni || {}, uf: s.uf || {}, efe: s.efe || {} };
+        // sin skin base propia (guardado viejo, restablecer): parte de la global, que en Personalizado queda oculta
+        var global = 'ninguna';
+        try { global = api.settings.value(G, 'skin') || global; } catch (e) { error('no pude leer la skin: ' + e); }
+        return { base: s.base || global, fam: s.fam || {}, uni: s.uni || {}, uf: s.uf || {}, efe: s.efe || {} };
     }
     function guardarBorrador() {
         // como api.settings.set (sin exigir definicion): queda en memoria hasta Save
@@ -48,7 +51,7 @@
         var mapa = capa === 'base' ? est.skin : est.skin[capa];
         var k = capa === 'base' ? 'base' : clave;
         var s = $('<select class="wfx-sel"></select>').attr('aria-label', t('Skin')).attr('title', t('Skin'));
-        s.append($('<option value=""></option>').text(t(primera)));
+        if (primera) { s.append($('<option value=""></option>').text(t(primera))); }   // la base no hereda: sin opcion vacia
         $.each(['ninguna'].concat(Object.keys(cat.skins || {})), function (_, id) {
             s.append($('<option></option>').attr('value', id).text(id === 'ninguna' ? t('No skin') : t(cat.skins[id])));
         });
@@ -89,7 +92,7 @@
         var r = $('#wfx_editor').empty();
         r.append($('<div class="sub-group-title"></div>').text(t('Custom')));
         r.append(fila(t('Base level'), select(est.base, null, function (v) { est.base = v; pintarUnidad(); }))
-            .append(selectSkin('base', null, '(Global skin)')));
+            .append(selectSkin('base', null, null)));
 
         r.append($('<div class="sub-group-title"></div>').text(t('By weapon family')));
         $.each(FAMILIAS, function (_, f) {

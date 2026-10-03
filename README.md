@@ -14,7 +14,7 @@ installed, and only their effect keys are changed, in memory.
   effect. Units are browsed by type (land, structures, air, naval, orbital, commanders). Effects that several units
   share are shown on both sides (e.g. the Manhattan shows the Dox bullet it fires). **Export** gives a text code to
   share your setup; **Import** loads one.
-- **Skin**: a visual theme over the chosen level: Cryogenic, Toxic, Inferno, Void, Holo, Plasma or Robotic. In Custom
+- **Skin**: a visual theme over the chosen level: Cryogenic, Toxic, Inferno, Void, Holo, Plasma, Robotic or **More Pew Pew**. In Custom
   you can also pick a skin by family, unit or effect.
 - **Team color**: every effect takes the color of the army that fires it, over the skin and level. Effects lose
   some of their glow with it.
@@ -65,3 +65,8 @@ Planetary Annihilation: Titans belong to their owners and are not covered by thi
 2. Which unit looks worst or overloaded?
 3. How does it feel performance-wise in big games?
 4. Is the Custom editor clear?
+
+## Credits
+The **More Pew Pew** skin brings the weapon effects of [More Pew Pew](https://github.com/domdom/com.pa.domdom.laser_unit_effects.src)
+by **dom314** (MIT) into Weapon FX, with the same Low/Original/High/Uber levels. Effects that More Pew Pew did not cover
+(for example nukes, orbital units and Titans) are made in its style: its colors by ammo type and its effects as templates. Based on More Pew Pew by dom314 (MIT); see `LICENSE`.

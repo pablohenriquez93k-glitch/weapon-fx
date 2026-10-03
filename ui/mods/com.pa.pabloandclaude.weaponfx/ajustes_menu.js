@@ -19,7 +19,9 @@
             texto('Weapon effects', 'class="sub-group-title"') +
             '<div class="sub-group top" style="flex-wrap:wrap; min-height:0;">' +
             '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + item + ' }"></div>' +
-            '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemSkin + ' }"></div>' +
+            // en Personalizado la skin se elige en el editor: la global se oculta para no pisar lo personalizado
+            '<div class="option" data-bind="visible: ' + item + '.value() !== \'personalizado\', template: { name: \'setting-template\', data: ' + itemSkin + ' }"></div>' +
+            '<div class="option" data-bind="visible: ' + item + '.value() === \'personalizado\', text: loc(\'!LOC:Skin\') + \': \' + loc(\'!LOC:Custom\')"></div>' +
             '<div class="option" data-bind="template: { name: \'setting-template\', data: ' + itemEquipo + ' }"></div></div>' +
             WFX.NOTAS.map(function (n) { return texto(n, NOTA); }).join('') +
             '<div id="wfx_editor" data-bind="visible: ' + item + '.value() === \'personalizado\'"></div>';
