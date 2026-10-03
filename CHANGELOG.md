@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.1 (2026-10-03)
+- **Sheller muzzle flash**: the Sheller lost its muzzle flash. Its unit file only names a sound for firing; the flash
+  comes from the base vehicle it inherits from, and Weapon FX read only one level of that inheritance. It now reads
+  every level, like the game, and the Sheller gets its Weapon FX muzzle flash plus the ground dust.
+- Same cause: the laser impact of the Commanders, the three Laser Defense Towers, the Umbrella and the Avenger comes
+  from their base ammo, so it stayed vanilla. They now get Weapon FX impacts.
+- With the Sheller now counted, the muzzle flash budget of the explosive family rose a little: at High and Uber, the
+  flashes of the Lob, Leviathan, Grenadier, Kessler and Ares are slightly bigger.
+- Galactic War co-op tested in game (GW AI Overhaul 7.5.0, two players, per-player tech): each player gets Weapon FX
+  with their own settings, and changing a setting mid-battle reloads only that player's view.
+
 ## 1.3.0 (2026-10-03)
 - **Galactic War**: Weapon FX now works in Galactic War, vanilla and GW AI Overhaul (GWO). The effects go into the war's
   own unit files (yours and the AI's), and changing a setting mid-battle reloads the view, same as in a normal match.

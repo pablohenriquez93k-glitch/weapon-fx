@@ -401,7 +401,7 @@
                         $.each(cambios, function (_, c) { propias[c.ruta.join('.')] = true; });
                         $.each(cambios, function (_, c) {
                             var v = valorEn(fus, c.ruta), nuevo = null;
-                            // libre = como el juego; o (Sheller) clave heredada de base_spec, sin pfx del juego en el catalogo,
+                            // libre = como el juego; o (antinuke: solo polvo) clave heredada de base_spec, sin pfx del juego en el catalogo,
                             // en una ficha que ninguna carta aplano (modSpecs aplana base_spec al cambiar una ficha)
                             var libre = comoJuego(v, c, cat) || (valorEn(orig, c.ruta) === undefined && orig.hasOwnProperty('base_spec') &&
                                 !$.grep(c.efectos, function (e) { return !!e.van; }).length);

@@ -48,8 +48,8 @@ Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
   Galata and the bomber; every skin on the Dox. Air, naval, orbital, nukes,
   mines and torpedoes are checked by numbers only (size, light, reach against the damage radius), not in game.
 - Nukes and mines use `sim_*_effect`; those may be read by the server, so they might show vanilla effects.
-- Galactic War: tested in game, vanilla and GW AI Overhaul 7.5.0, single player. Co-op Galactic War is not tested in
-  game.
+- Galactic War: tested in game, vanilla and GW AI Overhaul 7.5.0, single player and co-op (two players, per-player
+  tech). Each player sees the effects with their own Weapon FX settings.
 - UI languages: English, Spanish, French, German, Russian, Chinese (simplified), Japanese, Korean, Italian,
   Polish and Portuguese. Other languages show English.
 
