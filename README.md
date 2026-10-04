@@ -45,10 +45,13 @@ Source: https://github.com/pablohenriquez93k-glitch/weapon-fx
 
 ## Known limits
 - Tested in game: Dox, Ant, Gil-E, Tesla, Boom, Bumblebee, Leveler, Ares, Atlas, Pelter, Holkins, Anchor, Flak,
-  Galata, Sheller, the bomber, the laser defense towers and the land mine; every skin on the Dox. Air, naval, orbital,
-  nukes and torpedoes are checked by numbers only (size, light, reach against the damage radius), not in game.
-- The land mine's explosion shows its Weapon FX effect (tested in game). Nukes explode the same way (an explosion
-  entity that Weapon FX changes), but that is not tested in game yet.
+  Galata, Sheller, the bomber, the laser defense towers and the land mine; every skin on the Dox. Also tested in a
+  battle with the More Pew Pew skin: air (fighters, bombers, gunships, Zeus and anti-air), naval (every ship, torpedoes
+  included), orbital (Avenger, SXX-1304, Omega, Anchor, Helios, Umbrella), the nuke, the anti-nuke and the
+  Commander's death explosion. Without a skin and with the other skins, air, naval, orbital and nukes are checked by
+  numbers only (size, light, reach against the damage radius), not in game.
+- Reconnecting to a match keeps the effects, with the settings you have when you reconnect (tested in a normal match
+  and in a Galactic War co-op battle).
 - Galactic War: tested in game, vanilla and GW AI Overhaul 7.5.0 and 7.6.0, single player and co-op (two players,
   per-player tech). Each player sees the effects with their own Weapon FX settings.
 - UI languages: English, Spanish, French, German, Russian, Chinese (simplified), Japanese, Korean, Italian,

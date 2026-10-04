@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.4 (2026-10-03)
+- Tested in game, More Pew Pew skin: air, naval and orbital battles, the nuke, the anti-nuke intercepting a nuke and
+  the Commander's death explosion. No changes were needed.
+- Reconnecting tested in game: in a normal match, and as the guest of a Galactic War co-op battle. The effects come
+  back with the settings you have when you reconnect.
+- README: updated the list of what is tested in game.
+
 ## 1.3.3 (2026-10-03)
 - **More Pew Pew skin**: the effects Weapon FX gained in 1.3.1 (the Sheller muzzle flash and the laser impacts of the
   Commanders, the three Laser Defense Towers and the Avenger) showed the game's effect with this skin. They now use
